@@ -12,6 +12,7 @@ To get started with Arduino, you need to download and install the Arduino IDE.
 3. If you're using Windows, you will need to follow [these instructions][Instructions] to install additional drivers.
 
 Now that the Arduino IDE is installed, it is time to make sure everything is working.
+
 1. Open the IDE
 2. Go to File -> Examples -> 01.Basics -> Blink
 3. Click the button in the toolbar that looks like an arrow facing to the right.
