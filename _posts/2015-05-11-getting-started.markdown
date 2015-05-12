@@ -19,7 +19,7 @@ Mac OS X:
 
 1. [Download it from here][ArduinoIDE]
 2. Move the Arduino.app that is extracted from the zip into the Applications folder
-3. No step three here either.
+3. There is no step three.
 
 Windows:
 
