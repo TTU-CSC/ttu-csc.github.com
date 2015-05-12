@@ -24,7 +24,7 @@ Windows:
 1. [Download it from here][ArduinoIDE]
 2. Install it like any other program.
 3. You will probably need to follow [these instructions][Instructions] to install additional drivers.
-  a. [This page][ScreenshotTutorial] is slightly outdated, but could be helpful.
+  1. [This page][ScreenshotTutorial] is slightly outdated, but could be helpful.
 
 Now that the Arduino IDE is installed, it is time to make sure everything is working.
 
