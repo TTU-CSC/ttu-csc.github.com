@@ -7,11 +7,13 @@ categories: docs
 
 To get started with Arduino, you need to download and install the Arduino IDE.
 
-Ubuntu Linux:
+Debian / Ubuntu Linux:
 
-1. Make certain that you're running a recent version of Ubuntu.
-2. Open a terminal and type `sudo apt-get install arduino`
-3. There is no step three.
+1. Open a terminal and type `sudo apt-get install arduino`
+  1. The version contained in the repos is likely *heavily* outdated, but it installs all needed dependencies.
+2. Next, [download][ArduinoIDE] the Linux version appropriate to your CPU architecture.
+3. Use `tar -xvf arduino-*-linux*.tar.xz` or some other method to extract it in a convenient location.
+4. Using a terminal, `cd` into the arduino directory, and run `./arduino` to start the IDE.
 
 Mac OS X:
 
