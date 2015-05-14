@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lab 2: I/O With Analog"
-date:   2015-05-14 2:35:30
+date:   2015-05-14 14:35:30
 categories: docs
 ---
 This lab will focus on extending the previous lab with an analog input, and replacing one of the LEDs with a piezoelectric speaker.
