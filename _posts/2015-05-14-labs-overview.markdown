@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Overview of CSC2101 Labs"
-date:   2015-05-14 2:00:00
+date:   2015-05-14 14:00:00
 categories: docs
 ---
 
