@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lab 2: I/O With Analog"
+title:  "Lab 2: I/O With Analog and Arithmetic"
 date:   2015-05-14 14:35:30
 categories: docs
 ---
