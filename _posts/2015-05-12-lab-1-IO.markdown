@@ -37,6 +37,7 @@ Attempt to make LED 2 do the opposite of whatever you're telling LED 1 to do. If
 There are a lot of different ways to make this work, but there are three ways that most people are likely to try, and if you can figure all of them out, you're doing great! If you need help, there's absolutely nothing wrong with that.
 
 **Troubleshooting Tips!**
+
 1. For now, make sure you end your lines with semicolons. Some lines don't need semicolons, like blank lines and lines that just have a curly brace (`{` or `}`) on it. You also don't need semicolons on lines that _declare a function_, such as `void loop()`.
 2. If your code is uploading to the Arduino, but it isn't working right, make sure that you wrote your `pinMode` statements in the `setup` function. Writing them in the `loop` function would work too, but it's bad practice, because then you're setting the directions _over and over_, which is wasteful.
 3. If you're still having problems, make sure that your circuit looks the same as the one above and then ask a TA for help.
