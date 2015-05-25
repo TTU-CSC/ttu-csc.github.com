@@ -14,13 +14,13 @@ The first button is connected to pin 3, LED 1 is connected to pin 4, and LED 2 i
 
 For this lab, we're going to start out by just using LED 1 and the button. After we get LED 1 working, we'll add LED 2 into the mix to make it a little more interesting.
 
-Whenever the button is being pushed, we want LED 1 to turn on, but any time that the button is not being pushed, we want LED 1 to be turned off. On the Arduino, we can use a command (a function) called `DigitalRead`. This will look at a pin and tell us whether it sees 5 volts or not. If the button is being pushed, pin 3 will have 5 volts flowing to it from the power supply. This is equivalent to `1` in binary.
+Whenever the button is being pushed, we want LED 1 to turn on, but any time that the button is not being pushed, we want LED 1 to be turned off. On the Arduino, we can use a command (a function) called `digitalRead`. This will look at a pin and tell us whether it sees 5 volts or not. If the button is being pushed, pin 3 will have 5 volts flowing to it from the power supply. This is equivalent to `1` in binary.
 
-There is also another function, called `DigitalWrite`. `DigitalWrite` will take a 1 or a 0 and apply it on an output pin. So, if you `DigitalWrite` a `1` to pin 4, then that pin will be connected to 5 volts internally. Since there's an LED connected to pin 4, it will now have power flowing through it and it will turn on.
+There is also another function, called `digitalWrite`. `digitalWrite` will take a 1 or a 0 and apply it on an output pin. So, if you `digitalWrite` a `1` to pin 4, then that pin will be connected to 5 volts internally. Since there's an LED connected to pin 4, it will now have power flowing through it and it will turn on.
 
 If we combine the two, we can connect a button to the LED using software! First, we want to read the value of the button. So,
 
-    bool buttonPushed = digitalread(3);
+    bool buttonPushed = digitalRead(3);
 
 and then we can "write" that value to the output pin controlling the LED.
 
