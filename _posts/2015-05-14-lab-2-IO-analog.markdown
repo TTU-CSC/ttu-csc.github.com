@@ -38,6 +38,9 @@ Our goal is to make an LED and a piezo element blink and click, respectively, fo
 To do this lab, we want to `analogRead` the value of the potentiometer, turn on the LED and the Piezo, `delay` for 10ms, then turn off the LED and the Piezo. We then want to `delay` for however many milliseconds the value of the potentiometer was. If the potentiometer is about halfway, we'll be delaying for about 512ms, or half a second, for example.
 
 **Troubleshooting Tips**
+
 1. Make sure that the potentiometer is connected to `A0`! 
 
 **Questions**
+
+1.
