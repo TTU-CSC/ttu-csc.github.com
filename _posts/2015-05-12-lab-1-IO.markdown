@@ -18,6 +18,8 @@ Whenever the button is being pushed, we want LED 1 to turn on, but any time that
 
 There is also another function, called `digitalWrite`. `digitalWrite` will take a 1 or a 0 and apply it on an output pin. So, if you `digitalWrite` a `1` to pin 4, then that pin will be connected to 5 volts internally. Since there's an LED connected to pin 4, it will now have power flowing through it and it will turn on.
 
+However, before we can use either `digitalWrite` or `digitalRead`, we need to tell the Arduino which pins we'll be reading from and which ones we'll be writing to! If we don't tell it what our intentions are, it's very hard to predict what it will do when we read or write the values of the pins. There is a function called `pinMode` that allows us to set the direction of the pin. Saying `pinMode(3, INPUT)` will set pin 3 to be an input, which is a pin you can read values from. If we say `pinMode(4, OUTPUT)`, it sets pin 4 to be an output, which is a pin you can write values to. If you write a `1` to a pin, the pin will turn on and go to 5 volts. If you write a `0` to a pin, the pin will turn off and go to 0 volts. Make sure to set the `pinMode`s in the `setup` function. Everything else we're doing in this lab goes in the `loop` function.
+
 If we combine the two, we can connect a button to the LED using software! First, we want to read the value of the button. So,
 
     bool buttonPushed = digitalRead(3);
