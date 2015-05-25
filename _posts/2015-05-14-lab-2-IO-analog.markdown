@@ -37,6 +37,10 @@ Our goal is to make an LED and a piezo element blink and click, respectively, fo
 
 To do this lab, we want to `analogRead` the value of the potentiometer, turn on the LED and the Piezo, `delay` for 10ms, then turn off the LED and the Piezo. We then want to `delay` for however many milliseconds the value of the potentiometer was. If the potentiometer is about halfway, we'll be delaying for about 512ms, or half a second, for example.
 
+Now, we want to compress the range of values. Having it wait a full second between blinking and clicking is boring! So, if you divide the analog value by 20, the longest the system will wait is one twentieth of a second, which is much better. Try it out, and notice how you have much finer control over the higher-speed clicking and blinking, and there is no way to slow it down too much. Let's try dividing by 80. Do that, and you'll notice that as you move the potentiometer back and forth, you just seem to be adjusting the brightness of the LED! This is related to a concept called _pulse width modulation_, but we won't talk about that today. Feel free to research it though!
+
+The final step in this lab is to make it so that the LED is still visibly blinking, but we have our very fine control over the speed. So, keeping the division by 80, let's add 20 to the value after the division and run it.
+
 **Troubleshooting Tips**
 
 1. Make sure that the potentiometer is connected to `A0`! 
