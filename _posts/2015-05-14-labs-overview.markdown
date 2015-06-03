@@ -19,7 +19,7 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **Purpose:** Through this lab, you will learn to use more complex conditional logic effectively.  
 **Description:** Conditional Logic is a tool you will use to connect different results to different limiting factors, known as conditions. *If* a user presses a button *and* a user has pressed the other button *then* we will turn on this LED.
 
-### Lab 4: Loops  
+### [Lab 4: Loops]({% post_url 2015-06-02-lab-4-loops %})  
 **Purpose:** To familiarize you with a useful tool to cut down on writing the same code over and over.  
 **Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful. 
 
