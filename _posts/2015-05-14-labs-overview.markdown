@@ -15,7 +15,7 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **Purpose:** This lab teaches you how to deal with analog inputs.  
 **Description:** Analog inputs are signals that aren't just binary, 1 or 0. These inputs cover a range of values, defined by the *voltage* being sensed at the analog input. In this lab, you will use an analog input from a potentiometer to control a piezoelectric speaker's frequency of output. You will also do some arithmetic to make the system behave in a more pleasant way.
 
-### Lab 3: Conditional Logic  
+### [Lab 3: Conditional Logic]({% post url 2015-06-01-lab-3-conditional-logic.markdown %})  
 **Purpose:** Through this lab, you will learn to use more complex conditional logic effectively.  
 **Description:** Conditional Logic is a tool you will use to connect different results to different limiting factors, known as conditions. *If* a user presses a button *and* a user has pressed the other button *then* we will turn on this LED.
 
