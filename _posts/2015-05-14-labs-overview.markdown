@@ -21,5 +21,6 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 ### Lab 4: Loops  
 **Purpose:** To familiarize you with a useful tool to cut down on writing the same code over and over.  
-**Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful.  
+**Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful. 
+
 <While button is not pressed, blink LED. For each LED, turn that LED on, then wait, then off.>
