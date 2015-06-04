@@ -8,7 +8,7 @@ categories: docs
 Throughout the semester, there will be a variety of labs. Here, we will provide an overview of each lab.
 
 ### [Lab 0: Getting Started]({% post_url 2015-05-11-getting-started %})
-**Purpose:** To get the Arduino environment set up
+**Purpose:** To get the Arduino environment set up   
 **Description:** Teaches you how to install the Arduino environment and use a basic program on the Arduino.
 
 ### [Lab 1: I/O]({% post_url 2015-05-12-lab-1-IO %})  
