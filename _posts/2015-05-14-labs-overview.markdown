@@ -13,7 +13,7 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 ### [Lab 1: I/O]({% post_url 2015-05-12-lab-1-IO %})  
 **Purpose:** Learn how to use a microcontroller to interact with the real world, through buttons and LEDs.  
-**Description:** In this lab, you will construct a simple circuit that consists of a button and two LEDs. When the button isn't being pressed, both LEDs are off. However, while the button is being pressed, one LED should stay on, and the other should blink. This shows how to use one input, a button, and two outputs.
+**Description:** In this lab, you will construct a simple circuit that consists of a button and two LEDs. When the button isn't being pressed, one LED is on and the other is off. However, while the button is being pressed, the LEDs should switch state. This shows how to use one input, a button, and two outputs.
 
 ### [Lab 2: I/O with Analog and Arithmetic]({% post_url 2015-05-14-lab-2-IO-analog %})  
 **Purpose:** This lab teaches you how to deal with analog inputs.  
