@@ -7,7 +7,7 @@ categories: docs
 
 Throughout the semester, there will be a variety of labs. Here, we will provide an overview of each lab.
 
-### [Lab 0: Set up]({% post_url 2015-05-11-getting-started %})
+### [Lab 0: Getting started]({% post_url 2015-05-11-getting-started %})
 
 ### [Lab 1: I/O]({% post_url 2015-05-12-lab-1-IO %})  
 **Purpose:** Learn how to use a microcontroller to interact with the real world, through buttons and LEDs.  
