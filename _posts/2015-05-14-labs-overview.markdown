@@ -29,35 +29,28 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 <While button is not pressed, blink LED. For each LED, turn that LED on, then wait, then off.>
 
-### Lab 5  
-**Purpose:**  
-**Description:**  
+### Lab 5: Speed Game (part 1)  
+**Purpose:** Learning to use loops in more depth.  
+**Description:** Using two buttons, two normal LEDs, and the tri-color LED, you're going to build a game. The game will wait for a random amount of time, and then the tri-color LED will change from red to green. Whoever pushes their button first wins, and their LED turns on. The tri-color LED also changes to blue. After about two seconds, the game will reset, so the tri-color LED will go back to red, and both of the players' LEDs will turn off.  
 
-### Lab 6  
-**Purpose:**  
-**Description:**  
+### Lab 6: Speed Game (part 2)  
+**Purpose:** To use loops to measure time elapsed.   
+**Description:** Here, we will build the speed game from last time, but using the Arduino LCD Shield. The buttons on the shield will be used instead of the buttons from last time, and all of the LEDs will be replaced with the LCD. On the LCD, we want to show what state we're in, whether that's waiting on the random time to elapse, waiting on a user to push a button, or showing the end game screen. On the end game screen, we want to show who won and how long it took each user to push their button.  
 
-### Lab 7  
-**Purpose:**  
-**Description:**  
+### Lab 7: A/C unit  
+**Purpose:** Responding to changing conditions iteratively. (PWM + loops)  
+**Description:** We're going to simulate a thermostat, reading the temperature of the surrounding environment to decide whether we need to apply A/C or not, and how cold to make it. We will use an LED to represent the A/C unit, and we'll assume that the fan is on at all times. The more the A/C is on, the colder the air will be, so we'll be pulsing the LED, and the greater the percentage of time that the LED is on, the colder the air is that we're representing.
 
-### Lab 8  
-**Purpose:**  
-**Description:**  
+### Lab 8: Temperature logger  
+**Purpose:** Learn about arrays  
+**Description:** We want to store temperature readings in an array that the user can browse through. When they push the start button, we will record ten temperature readings, spaced one second apart. The user will then be able to scroll through them using the buttons on the LCD shield.  
 
-### Lab 9  
-**Purpose:**  
-**Description:**  
+### Lab 9: Music Box  
+**Purpose:** Learn about structs  
+**Description:** Using an array of structs that consist of a frequency and a length, students will play songs.  
 
-### Lab 10  
-**Purpose:**  
-**Description:**  
+### Lab 10: Weight sensor  
+**Purpose:** Do something interesting and practical  
+**Description:** Using the force sensitive resistor, students will first measure the weight of a reference item, like a nickel, and then they will measure the weight of items in terms of the reference. (like, item X weighs 5 nickels.)  
 
-### Lab 11  
-**Purpose:**  
-**Description:**  
-
-### Lab 12  
-**Purpose:**  
-**Description:**  
-
+### Labs 11 and 12 will be free form.
