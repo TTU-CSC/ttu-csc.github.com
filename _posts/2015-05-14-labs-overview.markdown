@@ -9,7 +9,7 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 ### [Lab 0: Getting Started]({% post_url 2015-05-11-getting-started %})
 **Purpose:** To get the Arduino environment set up   
-**Description:** Teaches you how to install the Arduino environment and use a basic program on the Arduino.
+**Description:** Teaches you how to install the Arduino environment and use a basic program on the Arduino. You will also use the Arduino LCD shield to write messages to the world!
 
 ### [Lab 1: I/O]({% post_url 2015-05-12-lab-1-IO %})  
 **Purpose:** Learn how to use a microcontroller to interact with the real world, through buttons and LEDs.  
