@@ -58,7 +58,7 @@ Each of these is used in conjunction with two *expressions*. Let's look at an ex
 These relational operators allow your code to make decisions and therefore behave differently in different circumstances.
 
 The Lab (Part 1)
-========
+================
 
 In part 1, we're going to use basic conditional logic to change the behavior of our system from the previous lab. At the end of the last lab, we were taking the analog value, dividing it by 40, and then adding 20 to it. Let's do the math! The range of the analog input is normally `0 <= x <= 1023`, where `x` is the current value of the analogRead() function.
 
