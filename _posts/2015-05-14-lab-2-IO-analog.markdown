@@ -44,7 +44,3 @@ The final step in this lab is to make it so that the LED is still visibly blinki
 **Troubleshooting Tips**
 
 1. Make sure that the potentiometer is connected to `A0`! 
-
-**Questions**
-
-1.
