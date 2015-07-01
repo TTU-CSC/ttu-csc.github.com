@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lab 6: Speed Game (Part 2)"
-date:   2015-06-02 14:44:30
+date:   2015-07-01 14:44:30
 categories: docs
 ---
 
