@@ -28,4 +28,6 @@ To read the buttons, we will use this code:
 
 `BUTTON_UP` represents the up button, but other options include `BUTTON_DOWN`, `BUTTON_LEFT`, `BUTTON_RIGHT`, and `BUTTON_SELECT`.
 
+I recommend using BUTTON_LEFT and BUTTON_RIGHT for the two user buttons, but you can use whichever ones seem most appropriate.
+
 Good luck!
