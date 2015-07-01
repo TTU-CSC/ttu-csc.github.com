@@ -39,12 +39,12 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 ### [Lab 6: Speed Game (part 2)]({% post_url 2015-07-01-lab-6-speed-game-2 %})  
 **Objective:** To use loops to measure time elapsed.  
-**New Functions and Keywords:**  
+**New Functions and Keywords:** `lcd.readButtons`, `lcd.setCursor`, `lcd.clear`  
 **Description:** Here, we will build the speed game from last time, but using the Arduino LCD Shield. The buttons on the shield will be used instead of the buttons from last time, and all of the LEDs will be replaced with the LCD. On the LCD, we want to show what state we're in, whether that's waiting on the random time to elapse, waiting on a user to push a button, or showing the end game screen. On the end game screen, we want to show who won and how long it took each user to push their button.  
 
 ### [Lab 7: A/C unit]({% post_url 2015-07-01-lab-7-ac-unit %})  
 **Objective:** Responding to changing conditions iteratively. (PWM + loops)  
-**New Functions and Keywords:**  
+**New Functions and Keywords:** `analogWrite`  
 **Description:** We're going to simulate a thermostat, reading the temperature of the surrounding environment to decide whether we need to apply A/C or not, and how cold to make it. We will use an LED to represent the A/C unit, and we'll assume that the fan is on at all times. The more the A/C is on, the colder the air will be, so we'll be pulsing the LED, and the greater the percentage of time that the LED is on, the colder the air is that we're representing.
 
 ### Lab 8: Temperature logger  
