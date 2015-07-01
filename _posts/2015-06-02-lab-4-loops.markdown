@@ -10,7 +10,7 @@ In this lab, we're going to remove the piezo element and add two more LEDs, for 
 Background
 ==========
 
-When writing software, there innumerable times when you need to do a certain action more than once. Copying and pasting code is a direct violation of the [DRY (Don't Repeat Yourself) principle](https://en.wikipedia.org/wiki/Don't_repeat_yourself), and WET solutions (We Enjoy Typing) make code that is both difficult to understand and maintain.
+When writing software, there innumerable times when you need to do a certain action more than once. Copying and pasting code to do the same thing multiple times is a direct violation of the [DRY (Don't Repeat Yourself) principle](https://en.wikipedia.org/wiki/Don't_repeat_yourself), and WET solutions (We Enjoy Typing) make code that is both difficult to understand and maintain.
 
 One of the fundamental tools used to avoid WET solutions is the loop. There are three major kinds of loops in C++: `for`, `while`, and `do..while`. Combining these three will allow you to minimize repetition. Here is an example of each:
 
@@ -77,7 +77,8 @@ Duly note that there is actually an even more concise form for this situation, s
 except to block the program and wait for the user to provide '64'. This wouldn't work for every case.
 
 
-    while (get_number_from_user() != 64); //the immediate semicolon indicates the code should stay on this line until the condition is false.
+    //the immediate semicolon indicates the code should stay on this line until the condition is false.
+    while (get_number_from_user() != 64);
 
 As you can see, the different major types all do approximately the same thing, but there are subtle differences that can be convenient.
 

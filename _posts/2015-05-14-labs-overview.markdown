@@ -30,11 +30,11 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 ### [Lab 4: Loops]({% post_url 2015-06-02-lab-4-loops %})  
 **Objective:** To familiarize you with a useful tool to cut down on writing the same code over and over.  
 **New Functions and Keywords:** `while`, `for`, `do..while`   
-**Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful. While a button is not pressed, blink one LED slowly. Once the button is pressed, for each LED, turn that LED on, then wait a short time, and then turn it off.
+**Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful. While a button is not pressed, blink three LEDs in an enticing manner. Once the button is pressed, blink all of the LEDs simultaneously on and simultaneously off.
 
 ### Lab 5: Speed Game (part 1)  
 **Objective:** Learning to use loops in more depth.  
-**New Functions and Keywords:**  
+**New Functions and Keywords:** `random`  
 **Description:** Using two buttons, two normal LEDs, and the tri-color LED, you're going to build a game. The game will wait for a random amount of time, and then the tri-color LED will change from red to green. Whoever pushes their button first wins, and their LED turns on. The tri-color LED also changes to blue. After about two seconds, the game will reset, so the tri-color LED will go back to red, and both of the players' LEDs will turn off.  
 
 ### Lab 6: Speed Game (part 2)  

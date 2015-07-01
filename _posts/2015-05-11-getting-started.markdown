@@ -38,7 +38,13 @@ If your Arduino IDE is configured correctly and your Arduino is plugged in, you 
 
 Next, we're going to get your LCD shield working. To do this, we need to download a library, which is code that someone else has written that our program is going to use. Download it [from here][AdafruitLibrary]. Once you have it downloaded, extract the zip file. You'll end up with a folder called Adafruit-RGB-LCD-Shield-Library-master, but I suggest renaming it to Adafruit-RGB-LCD-Shield. Move this folder into your Documents folder -> Arduino -> libraries. Placing it inside the libraries folder will let the Arduino IDE see it. Make sure to restart the IDE, so it'll check for the library again.
 
-Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put this line: `Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();`. That line of code will make a new variable called `lcd` that will handle all of the talking with our LCD shield. Now, after the line that says `void setup() {`, let's put the following code:
+Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put these lines:
+
+    #include <Adafruit_MCP23017.h>
+    #include <Adafruit_RGBLCDShield.h>
+    Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
+
+That last line of code will make a new variable called `lcd` that will handle all of the talking with our LCD shield. Now, after the line that says `void setup() {`, let's put the following code:
 
     lcd.begin(16, 2); //it is a 16 x 2 character display
     lcd.print("Hello, World!");
