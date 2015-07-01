@@ -14,7 +14,7 @@ The goal of this lab is to build the speed game another way. The gameplay should
 - when one user presses their button after this point, the LCD should show a message indicating both that the game is over and who won.
 - wait 2 seconds, then start it all over.
 
-The only new information you need is to be able to read the buttons on the LCD shield, but if you need to remember how to set it up and write to the LCD, feel free to [review the first tutorial]({% post_url 2015-05-11-getting-started %}).
+The only new information you need is to be able to read the buttons on the LCD shield, but if you need to remember how to set it up and write to the LCD, feel free to .
 
 To clear the LCD screen, simply say `lcd.clear()` and `lcd.setCursor(0, 0)`.
 

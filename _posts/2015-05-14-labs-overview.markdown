@@ -32,12 +32,12 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **New Functions and Keywords:** `while`, `for`, `do..while`   
 **Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful. While a button is not pressed, blink three LEDs in an enticing manner. Once the button is pressed, blink all of the LEDs simultaneously on and simultaneously off.
 
-### [Lab 5: Speed Game (part 1)]({% post_url 2015-07-01-lab-5-speed-game-1 %})  
+### [Lab 5: Speed Game (part 1)]({% post_url 2015-06-02-lab-4-loops %})  
 **Objective:** Learning to use loops in more depth.  
 **New Functions and Keywords:** `random`  
 **Description:** Using two buttons, two normal LEDs, and the tri-color LED, you're going to build a game. The game will wait for a random amount of time, and then the tri-color LED will change from red to green. Whoever pushes their button first wins, and their LED turns on. The tri-color LED also changes to blue. After about two seconds, the game will reset, so the tri-color LED will go back to red, and both of the players' LEDs will turn off.  
 
-### [Lab 6: Speed Game (part 2)]({% post_url 2015-07-01-lab-6-speed-game-2 %})  
+### [Lab 6: Speed Game (part 2)]({% post_url 2015-06-02-lab-4-loops %})  
 **Objective:** To use loops to measure time elapsed.  
 **New Functions and Keywords:**  
 **Description:** Here, we will build the speed game from last time, but using the Arduino LCD Shield. The buttons on the shield will be used instead of the buttons from last time, and all of the LEDs will be replaced with the LCD. On the LCD, we want to show what state we're in, whether that's waiting on the random time to elapse, waiting on a user to push a button, or showing the end game screen. On the end game screen, we want to show who won and how long it took each user to push their button.  
