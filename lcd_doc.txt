@@ -1,0 +1,441 @@
+
+To use the LCD object, you must include the following header files:
+
+#include <Wire.h>
+#include <Adafruit_MCP23017.h>
+#include <Adafruit_RGBLCDShield.h>
+
+The LCD class has the folowing functions in it that you're concerned with:
+
+class Adafruit_RGBLCDShield : public Print {
+
+public:
+
+	Adafruit_RGBLCDShield();
+
+	void begin(uint8_t cols, uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
+
+	void clear();
+	void home();
+
+	void noDisplay();
+	void display();
+	void noBlink();
+	void blink();
+	void noCursor();
+	void cursor();
+	void scrollDisplayLeft();
+	void scrollDisplayRight();
+	void leftToRight();
+	void rightToLeft();
+	void autoscroll();
+	void noAutoscroll();
+
+	void setCursor(uint8_t row, uint8_t col); 
+
+	uint8_t readButtons();
+
+	//from the Print library
+
+	void print(const String &str);
+	void print(const char *cstr);
+	void print(char c, int size = BYTE);
+	void print(unsigned char uc, int size = BYTE);
+	void print(int i, int base = DEC);
+	void print(unsigned int ui, int base = DEC);
+	void print(long li, int base = DEC);
+	void print(unsigned long uli, int base = DEC);
+	void print(double val, int digits = 2);
+
+	void println(const String &str);
+	void println(const char *cstr);
+	void println(char c, int size = BYTE);
+	void println(unsigned char uc, int size = BYTE);
+	void println(int i, int base = DEC);
+	void println(unsigned int ui, int base = DEC);
+	void println(long li, int base = DEC);
+	void println(unsigned long uli, int base = DEC);
+	void println(double val, int digits= 2);
+	void println();
+
+}
+
+
+Function Descriptions:
+---------------------------------------------------------------------------------------------------
+
+	Adafruit_RGBLCDShield::Adafruit_RGBLCDShield();
+
+This is the constructor for the LCD object; it creates a new one an initalizes it. You shoudl only ever make one of these.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::begin(uint8_t cols, uint8_t rows, uint8_t charsize = LCD_5x8DOTS);
+
+This function tells the object how large our LCD is, and what size characters it uses. We MUST call this function immediatley after creating an object, otherwise we'll have a bad time.
+The third argument is optional; it has a default value that it will take if you do not pass one. 
+Our LCD is 16x2, so you should always pass those numbers in. Our LCD also uses the default character size, so don't bother with the last argument.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16,2);
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::clear();
+
+This function clears the display, and sets the display's cursor to (0,0) (the top-left corner of the display)
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.print("lkjahdfs"); //junk we want off the screen
+	lcd.clear();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::home();
+
+This function sets the LCD's cursor to (0,0) (the top-left corner of the display)
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.print("lkjahdfs"); //junk we want to overwrite
+	lcd.home();
+	lcd.print("Better text!");
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::noDisplay();
+
+This function turns the LCD's display off.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.noDisplay();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::display()
+
+This is the counterpart to noDisplay(). It turns the display back on. The display is on by default, so there is no need to call this at start, only after a call to noDisplay().
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	//some stuff that makes us want to turn the display off
+
+	lcd.noDisplay();
+
+	//do some stuff, wand LCD on again
+
+	lcd.display();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::noBlink();
+
+This function makes the cursor stop blinking. It blinks by default.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.noBlink();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::blink();
+
+This function enables cursor blinking. The cursor blinks by default, so you only need to use it to reenable blinking after disabling it.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	//some stuff that makes us want to turn blinking off
+
+	lcd.noBlink();
+
+	//do some stuff, want blinking on
+
+	lcd.blink();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::noCursor();
+
+This function turns display of the cursor off. The cursor is displayed by default.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.noCursor();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::cursor();
+
+This function enables display of the cursor. The cursor is displayed by default, so you only would need to call this after a call to noCursor();
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	//do something and want the cursor gone
+	lcd.noCursor();
+
+	//do something else and want it back on
+	lcd.cursor();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::scrollDisplayLeft();
+
+This function is used to scroll the display left to see text that does not fit on one entire line.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.print("This is a big string."); //this is too large to display on one line
+
+	for (int i = 0; i < 6; ++i){
+
+		lcd.scrollDisplayLeft();	//move display left
+		delayMicroseconds(10000);	//wait so humans can see it (1 second);
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::scrollDisplayRight();
+
+This function scrolls the display to the right.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.print("This is a big string."); //this is too large to display on one line
+
+	for (int i = 0; i < 6; ++i){
+
+		lcd.scrollDisplayLeft();	//move display left
+		delayMicroseconds(10000);	//wait so humans can see it (1 second);
+
+	}
+
+	//now we want to move the display back
+	for (int i = 0; i < 6; ++i){
+
+		lcd.scrollDisplayRight();	//move display right
+		delayMicroseconds(10000);	//wait so humans can see it (1 second);
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::leftToRight();
+
+This sets the LCD to display text left to right (think English).
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.leftToRight();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::rightToLeft();
+
+This sets the LCD to displat text right to left (think Hebrew).
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.rightToLeft();
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::autoscroll();
+
+This function will left justify text from the cursor.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.autoscroll();
+	lcd.print("This is a large string I'd like to autoscroll.");
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::noAutoscroll();
+
+This function will right justify text from the cursor.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+	lcd.noAutoscroll();
+	lcd.print("This is a large string I'd like to autoscroll.");
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::setCursor(uint8_t row, uint8_t col);
+
+This function puts the cursor at the specified position. The position is zero-based.
+If one of the arguments is outside the bounds of the screen, it will cause undefined behavior (bad stuff).
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	//I want to write two X at the middle of the bottom row
+	lcd.setCursor(7, 1);
+	lcd.print("XX");
+
+
+---------------------------------------------------------------------------------------------------
+
+	uint8_t Adafruit_RGBLCDShield::readButtons();
+
+This function gets the state of the buttons from the LCD. In order to determine which button is pressed, you'll need to bitwise AND with one of several predefined values defined for you:
+
+BUTTON_UP, BUTTON_DOWN, BUTTON_LEFT, BUTTON_RIGHT, BUTTON_SELECT
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	while (true){
+
+		uint8_t buttons = lcd.readButtons();
+
+		if (buttons & BUTTON_SELECT){
+
+			lcd.print("Select pressed.");
+
+		}
+
+		delayMicroseconds(10000);
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::print(const String &str);					//prints C++ strings
+	void Adafruit_RGBLCDShield::print(const char *cstr);					//prints C strings
+	void Adafruit_RGBLCDShield::print(char c, int size = BYTE);				//prints a single character
+	void Adafruit_RGBLCDShield::print(unsigned char uc, int size = BYTE);	//prints a single unsigned character
+	void Adafruit_RGBLCDShield::print(int i, int base = DEC);				//prints an integer
+	void Adafruit_RGBLCDShield::print(unsigned int ui, int base = DEC);		//prints an unsigned integer
+	void Adafruit_RGBLCDShield::print(long li, int base = DEC);				//prints a long integer
+	void Adafruit_RGBLCDShield::print(unsigned long uli, int base = DEC);	//prints an unsigned long intager
+	void Adafruit_RGBLCDShield::print(double val, int digits = 2);			//prints a double, with a certain number of gigits past the decimal
+
+These functions take something and print them to the LCD. 
+
+This function is what we call "overloaded." There are multiple definitions for the same named function that take different arguments. Overloads are generally provided for convinence; these are provided so you don't have to convert every primitave variable to a string before printing. The overloaded functions do that for you.
+This function also has a few default arguments for certain overloads of it. For now, you can ignore all of them excpet for the very last one. It tells it how many digits past the decimal place to print.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	String str = "12";
+	char * cstr = "12";
+
+	char c = 'c'
+	unsigned char uc = 'u'
+
+	int i = 12;
+	unsigned int ui = 12;
+	long int li = 12;
+	unsigned long uli = 12;
+	double val = 12.012345;
+
+	//each one of these will print a 12
+	lcd.print(str);
+	lcd.print(cstr);
+	lcd.print(i);
+	lcd.print(ui);
+	lcd.print(li);
+	lcd.print(uli);
+	lcd.print(val, 0);
+
+	//these will print the character
+	lcd.print(c);
+	lcd.print(uc);
+
+---------------------------------------------------------------------------------------------------
+
+	void Adafruit_RGBLCDShield::println(const String &str);					//prints a C++ string and a newline
+	void Adafruit_RGBLCDShield::println(const char *cstr);					//prints a C string and a newline
+	void Adafruit_RGBLCDShield::println(char c, int size = BYTE);			//prints a single character and a newline
+	void Adafruit_RGBLCDShield::println(unsigned char uc, int size = BYTE);	//prints a single unsigned character and a newline
+	void Adafruit_RGBLCDShield::println(int i, int base = DEC);				//prints an integer and a newline
+	void Adafruit_RGBLCDShield::println(unsigned int ui, int base = DEC);	//prints an unsigned integet and a newline
+	void Adafruit_RGBLCDShield::println(long li, int base = DEC);			//prints a long integer and a newline
+	void Adafruit_RGBLCDShield::println(unsigned long uli, int base = DEC);	//prints an unsigned long integer and a newline
+	void Adafruit_RGBLCDShield::println(double val, int digits= 2);			//prints a decimal value and a newline
+	void Adafruit_RGBLCDShield::println();									//prints just a newline
+
+These functions work just the same as the print functions, just that they also print a newline character after everything.
+
+This function is what we call "overloaded." There are multiple definitions for the same named function that take different arguments. Overloads are generally provided for convinence; these are provided so you don't have to convert every primitave variable to a string before printing. The overloaded functions do that for you.
+This function also has a few default arguments for certain overloads of it. For now, you can ignore all of them excpet for the very last one. It tells it how many digits past the decimal place to print.
+
+Usage:
+
+	Adafruit_RGBLCDShield lcd();
+	lcd.begin(16, 2);
+
+	String str = "12";
+	char * cstr = "12";
+
+	char c = 'c'
+	unsigned char uc = 'u'
+
+	int i = 12;
+	unsigned int ui = 12;
+	long int li = 12;
+	unsigned long uli = 12;
+	double val = 12.012345;
+
+	//each one of these will print a 12
+	lcd.println(str);
+	lcd.println(cstr);
+	lcd.println(i);
+	lcd.println(ui);
+	lcd.println(li);
+	lcd.println(uli);
+	lcd.println(val, 0);
+
+	//these will print the character
+	lcd.println(c);
+	lcd.println(uc);
+
+---------------------------------------------------------------------------------------------------
