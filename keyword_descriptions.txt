@@ -1,0 +1,485 @@
+
+C++ Keywords
+
+There are several reserved words, or keywords, that come with any computer programming language. They generally perform some important, standard function inherant to the language.
+Keywords are not allowed to be used as names for variables, objects, or functions, as that would be ambiguous.
+There are many keywords in C++. Here are the ones you'll use most frequently.
+
+---------------------------------------------------------------------------------------------------
+
+	int
+
+This keyword is used to declare a variable of type int, a 16-bit, signed integer at minimum. It can hold values between +/- 32,767.
+
+Usage:
+
+	int x = 5; // X is an integer value that contains 5.
+
+---------------------------------------------------------------------------------------------------
+
+	char
+
+This keyword declares a variable of type char, to hold a single character. It can also hold signed integers between +/- 127.
+A char is defined by the C++ standard to be exactly one byte long, or eight bits.
+
+Usage:
+
+	char myChar = 'y'; 	//myChar has the ASCII value for y in it
+	char other	= 35;	//also valid
+
+---------------------------------------------------------------------------------------------------
+
+	long
+
+This keyword defines a long integer, a 32-bit, signed number at minimum. It can hold numbers between +/-2,147,483,647.
+It can also be used as a modifier to other data types, usually doubling their size.
+
+Usage:
+
+	long x = 12345678;		
+	long int y = -12345678;	//can also be used in this fashion
+	long double z = 1.123456;
+	long long  ll = 123456;	//a very large number
+
+---------------------------------------------------------------------------------------------------
+
+	unsigned
+
+This keyword defines an unsigned integer, a 16-bit value at minimum. It can hold values between 0 and 65,535.
+It can also be used as a modifier to other integer types, making them unsigned as well.
+
+Usage:
+
+	unsigned x = 123;
+	unsigned char y = 10;
+	unsigned long z = 65535;
+	unsigned long long a = 123456789101112131415;
+
+---------------------------------------------------------------------------------------------------
+
+	bool, true, false
+
+This keyword is used to declare a boolean value, either true or false. Booleans are the same size as integers.
+Booleans are usually used with the reserved words true and false, though integers can be used.
+
+true and false evaluate to 1 and 0, respectivley. Youshould use them when using booleans, because it makes your code more readable.
+
+Usage:
+
+	bool val0 = true;
+	bool val2 = false;
+	bool val3 = 0;		//false
+	bool val4 = 1;		//true
+	bool val5 = 1234;	//also true
+
+---------------------------------------------------------------------------------------------------
+
+	float
+
+This keyword defines a 32-bit floating-point number (something with a decimal).
+The values that can be stored in floating point bumbers is complicated, but generally, a float can store up to 9 significant figures.
+
+Usage:
+
+	float x = 12.345;
+	float y = -0.123456789;
+
+---------------------------------------------------------------------------------------------------
+
+	double
+
+This is used to define a double-precision floating-point number. It is called double because it is twice the size of a float.
+The values that can be stored in floating-point numbers are complicated, but generally, a double can store up to 17 significant figures.
+
+Usage:
+
+	double x = 12.345;
+	double y = -0.12345678912345678;
+
+---------------------------------------------------------------------------------------------------
+
+	const
+
+This keyword is used to mark something as constant, meaning that it cannot change once it is set.
+
+Usage:
+
+	const int x = 5; //x is ALWAYS 5
+	x = 7;			//won't compile!
+
+---------------------------------------------------------------------------------------------------
+
+	if, else
+
+These keywords are used in decision making. They can be chained together as much as needed. The general format is:
+
+	if (<expr>){
+
+		//do something
+
+	} else if (<expr>){
+
+		//do something else
+
+	} else {
+
+		//do something else
+
+	}
+
+where <expr> is something that evaluates to a boolean, you can have as many else-if's as you want (including zero), and the else is optional.
+
+Usage:
+
+	int x = 5;
+
+	if (x == 2){
+
+		//this will execute only if x is 2
+
+	} else if (x == 3){
+
+		//this will execute if x is 3
+		//it will not be checked if x is 2
+
+	} else {
+
+		//this will execute ONLY if the above do not.
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	while, do
+
+These keywords are used for looping. The general syntax is:
+
+	while (<expr>){
+
+		//do this over and over again until <expt> is false
+
+	}
+
+	do {
+
+		//do this once, then check <expr>, and keep doing until it is false
+
+	} while (<expr>);
+
+where <expr> is a boolean expression.
+
+The first of the above is called a while loop. It will execute the statements between the {} until its condition is false.
+The second loop is a do-while loop. It will ALWAYS execute the statements in the {} once, then check the expression, ane behave as a while loop from there on out.
+
+Usage:
+
+	bool done = false;
+
+	while (!done){
+
+		//do something, eventually setting done to true
+
+	}
+
+	do {
+
+		//done is currently true, so this will happen only once.
+
+	} while (!done);
+
+---------------------------------------------------------------------------------------------------
+
+	break
+
+This keyword is used to break from a loop before the condition is false.
+
+Usage:
+	
+	int x = 0;
+
+	while (true){
+
+		//loop FOREVER, until we touch x
+		if (x != 0){
+
+			break;
+
+		}
+
+	}
+
+	//we're free!
+
+---------------------------------------------------------------------------------------------------
+
+	switch, case, default
+
+This is an alternate, simpler form of conditional. It is used to check a variable against a a set of fixed values.
+A switch statement does what we call "falling-through". If not broken out of with break, it will execute every statement from the first true one downwards.
+Switch statements can also ahve a default clause, which will only happen if no other conditions are true, or if it is fallen through to.
+
+Usage:
+
+	int x = 4;
+
+	switch (x){
+
+		case 0: { 
+
+			//do something if x is 0
+			break;
+
+		} case 1:{
+
+			//do something if x is 1 OR 2
+
+
+		} case 2:{
+
+			break;
+
+		} default:{
+
+
+
+		}
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	const_cast, dynamic_cast, reinterpret_cast, static_cast
+
+These keywords are what we call casts. They tell the compiler to treat data in a different manner than normal.
+There syntax generally is:
+
+	something_cast<type>(variable);
+
+where something_cast is one of the below, type is a variable type, and variable is a variable to be casted.
+
+	const_cast:			Tell the compiler to treat a variable as if it were or were not constant.
+	dynamic_cast:		Determine if a cast can be made at runtime. If not, it will throw a bad_cast exception.
+	reinterpret_cast:	Will cast as a value, forgetting about any type checks. 
+	static_cast:		Determine if a cast can be made at compile-time. Will cause a compiler error if it cannot be made.
+
+Generally, you'll want to stice to static_cast, because the other three are varying degrees of unsafe, and should be avoided at all costs, unless you seriously know what tou're doing.
+
+Usage:
+
+	int x = 1;
+	int y = 4;
+
+	float xOverY = x / static_cast<float>(y); //tell the compiler to treat this a floating-point division
+
+---------------------------------------------------------------------------------------------------
+
+	return
+
+This keyword is used to return from a function a value back to its caller. 
+All functions that return a type other than void must have a return statement in them.
+The return keyword can be used to exit a void function early if desired.
+
+Usage:
+
+	int add(int a, int b){
+
+		return a + b; //compiler will get mad at me if I do not have a return!
+
+	}
+
+	void hello(){
+
+		cout << "Hello" << endl;
+		//no return needed
+
+	}
+
+	void helloIfTrue(bool val){
+
+		if (!val){
+
+			return; //you can exit early from a void function if you want.
+
+		} 
+
+		cout << "Hello" << endl;
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void
+
+This keyword is used to refer to somerhing that lacks a type, such as functions without a return value, or pointers with no size information.
+A void* has the special ability for anything to be casted to it, and anything can be casted from it. Generally, that is not a good idea, unlkess you really know what you're doing.
+
+Usage:
+
+	void hello(){
+
+		cout << "Hello" << endl;
+
+	}
+
+	void *x; //x has no size information with it, be very careful with these!
+
+---------------------------------------------------------------------------------------------------
+
+	new, new [], delete, delete []
+
+These keywords are used to dynamically allocate and deallocate memory.
+
+If you allocate memory with new, you MUST deallocate it with delete. Failing to do so can cause one of the worst kinds of bugs, known as memory leaks.
+
+new[] and delete [] are used for allocating and deallocating arrays. Same rules apply with them.
+
+Usage:
+
+	int *x = new int; 	//make me a new integer;
+	*x = 5;				//x points to an integer, whigh is 5.
+	delete x;			//x points to the same spot, but it has been freed
+
+	x = new int[5];		//now x points to an array of five integers
+
+	delete [] x;		//x points to the same spot, but all 5 slots have been freed.
+
+---------------------------------------------------------------------------------------------------
+
+	try, catch, throw
+
+These keywords are used in exception handling. Some code handles errors by throwing exceptions, which must be caught, or your program will crash.
+
+Exceptions are thrown with throw. Areas that may throw exception must be in a try-catch block.
+
+You must specify what kind of exception you want to catch, or it will not be caught. The exception is catch(...), which can catch anything.
+
+Usage:
+
+	try {
+
+		//some tricky code
+		throw new out_of_range();
+
+	} catch (out_of_range &it){ 	//you must specify what kind of exeption to catch
+
+		cerr << "On, no!" << endl;
+
+	} catch (...){ 					//this will catch anything
+
+		cerr << "Unknown exception!" << endl;
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	struct
+
+This keyword is used to define user-specified data types.
+A struct can ahve any number of fields, which can be any already defined type, including primitaves, objects, and other structs.
+
+Usage:
+
+	struct MyStruct {
+
+		int x;		//each field must have a type and name
+		float y;
+		char *z;
+
+	}; //don't forget the semicoln!
+
+	MyStruct thing;
+
+	thing.x = 0;					//fields are refered to by name with the . operator
+	thing.y = 1.25;
+	thing.x = "This is my struct!";
+
+---------------------------------------------------------------------------------------------------
+
+	class, public, private, protected, this
+
+These keywords are used when defining one's own objects. Objects can be quite complicated.
+A class is similar to a struct, excpet it can have functions attached to it as well as variables, and they can have varing levels of visibility.
+
+A class has two special methods, called the constructor and destructor. They are automatically called when an object is created or destroyed, respectivley. They are responsible for setting up the object, and freeing oany of its resources. If you do not specify one, you will get a default one that does noting from the compiler.
+
+Variables and functions within a class can be marked public, protected, or private:
+
+	public:		Anyone can use these
+	protected:	Only me and my children can use these
+	private:	Only I can use these
+
+Within an object, you can obtain a pointer to yourself with the this keyword.
+
+Functions defined in an object must have a body defined somewhere.
+
+Usage:
+
+	class MyClass {
+
+		public:		//these can be seen by anyone who has the object
+
+			MyClass(int _x);	//constructor
+			~MyClass();			//destructor
+
+			void setX(int newX){	//you can define a function here
+
+				x = newX; 
+
+			}
+
+			int getX();
+
+		protected:	//these can be seen only by the object istslf and its children
+
+			protectedFunction(){}
+
+		private:	//these can be seen only by the object itself
+
+			int x; //my number!
+
+	}
+
+	//or you can define functions here, like this
+	MyClass::MyClass(int _x){
+
+		x = _x;
+
+	}
+
+	MyClass::~MyClass(){} //empty
+
+	void MyClass::getX(){
+
+		return this->x; //you can use the this pointer too
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	using, namespace
+
+This keyword is used when you want to use a namespace, or use somehing out of a namespace.
+Namespaces are used to avoid name conflicts. Sometimes importing a whole namespace can cause a conflict, so you might only want to import one thing.
+Sometimes, you have a function you want to call somerhing else. You can do that too.
+
+Usage:
+
+	using namespace std;				//use the entire STD namespace
+	using CSC2100::someFunction;		//use only this function rather than the whole namespace
+	using f = CSC2100::otherFunctionWithAReallyLongAnnoyingName;	//use this function, but give it a new name, because this one sucks
+
+---------------------------------------------------------------------------------------------------
+
+	enum
+
+This keyword is used to create an enumerated data type. In other words, you're giving names to integers.
+
+You can sopecify an enum's type if you want. If you don't they will be of type int by default.
+You can also specify the values. If you don't the compiler will pick them for you, usually starting at 0 and going upwards.
+
+Usage:
+
+	enum MyEnum0 { ZERO, ONE, TWO };			//default int from zero
+	enum MyEnum2 : char { A = 'a', B = 'b' };	//this one is a char, and I'm specifying values
+
+---------------------------------------------------------------------------------------------------
