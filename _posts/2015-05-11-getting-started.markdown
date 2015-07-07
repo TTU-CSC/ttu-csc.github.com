@@ -36,6 +36,8 @@ Now that the Arduino IDE is installed, it is time to make sure everything is wor
 
 If your Arduino IDE is configured correctly and your Arduino is plugged in, you should have an LED blinking on it now.
 
+We want to check the LCD Shield, so plug it into the Arduino now, and we'll create a short little program to use it.
+
 Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put these lines:
 
     #include <LiquidCrystal.h>
