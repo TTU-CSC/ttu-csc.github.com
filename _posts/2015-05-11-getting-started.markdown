@@ -40,9 +40,8 @@ Next, we're going to get your LCD shield working. To do this, we need to downloa
 
 Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put these lines:
 
-    #include <Adafruit_MCP23017.h>
-    #include <Adafruit_RGBLCDShield.h>
-    Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
+    #include <LiquidCrystal.h>
+    LiquidCrystal lcd(8, 9, 4, 5, 6, 7);           // select the pins used on the LCD panel
 
 That last line of code will make a new variable called `lcd` that will handle all of the talking with our LCD shield. Now, after the line that says `void setup() {`, let's put the following code:
 
@@ -54,4 +53,3 @@ If you run the code now, you should see Hello, World on your shield! If not, we 
 [ArduinoIDE]:         http://www.arduino.cc/en/Main/Software
 [Instructions]:       http://www.arduino.cc/en/Guide/Windows#toc4
 [ScreenshotTutorial]: http://www.arduino.cc/en/Guide/UnoDriversWindowsXP
-[AdafruitLibrarY]:    https://github.com/adafruit/Adafruit-RGB-LCD-Shield-Library/archive/master.zip
