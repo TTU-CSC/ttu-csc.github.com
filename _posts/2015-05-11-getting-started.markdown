@@ -36,8 +36,6 @@ Now that the Arduino IDE is installed, it is time to make sure everything is wor
 
 If your Arduino IDE is configured correctly and your Arduino is plugged in, you should have an LED blinking on it now.
 
-Next, we're going to get your LCD shield working. To do this, we need to download a library, which is code that someone else has written that our program is going to use. Download it [from here][AdafruitLibrary]. Once you have it downloaded, extract the zip file. You'll end up with a folder called Adafruit-RGB-LCD-Shield-Library-master, but I suggest renaming it to Adafruit-RGB-LCD-Shield. Move this folder into your Documents folder -> Arduino -> libraries. Placing it inside the libraries folder will let the Arduino IDE see it. Make sure to restart the IDE, so it'll check for the library again.
-
 Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put these lines:
 
     #include <LiquidCrystal.h>
