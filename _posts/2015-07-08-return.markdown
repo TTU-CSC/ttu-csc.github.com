@@ -9,9 +9,9 @@ categories: docs
 
 This keyword is used to return a value from a function back to its caller. 
 
-All functions that return a type other than void must have a return statement in them.
+All functions that return a type other than void must have a `return` statement in them.
 
-The return keyword can be used to exit a void function early if desired.
+The `return` keyword can be used to exit a void function early if desired.
 
 Usage:
 
