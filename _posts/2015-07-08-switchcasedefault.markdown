@@ -28,7 +28,7 @@ Usage:
 		} case 1:{
       y = x + 2;
 			//do something if x is 1 OR 2, since we have no break statement to keep it from continuing on into case 2.
-      //this is *not* recommended.
+			//this is *not* recommended.
 		} case 2:{
       z = x * y;
 			break;
