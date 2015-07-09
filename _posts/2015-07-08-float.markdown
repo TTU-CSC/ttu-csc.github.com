@@ -1,7 +1,16 @@
 ---
 layout: post
-title:  "Keyword Help: int"
+title:  "Keyword Help: float"
 date:   2015-07-08 15:37:30
 categories: docs
 ---
 
+	keyword: float
+
+This keyword defines a 32-bit floating-point number, which is a number with a decimal point, as opposed to integers which only store whole numbers.
+The values that can be stored in floating point numbers is complicated, but generally, a float can store up to 9 significant figures.
+
+Usage:
+
+	float x = 12.345;
+	float y = -0.123456789;
