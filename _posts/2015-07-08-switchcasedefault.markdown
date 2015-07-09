@@ -26,16 +26,16 @@ Usage:
 			break; //but jump out of the switch, we don't want to go to "case 1."
 
 		} case 1:{
-      y = x + 2;
+			y = x + 2;
 			//do something if x is 1 OR 2, since we have no break statement to keep it from continuing on into case 2.
 			//this is *not* recommended.
 		} case 2:{
-      z = x * y;
+			z = x * y;
 			break;
 
 		} default:{
-		  z = 25;
-      break;
+			z = 25;
+			break;
 		}
 	}
 
