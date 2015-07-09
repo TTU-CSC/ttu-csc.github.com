@@ -47,10 +47,10 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **New Functions and Keywords:** `analogWrite`  
 **Description:** We're going to simulate a thermostat, reading the temperature of the surrounding environment to decide whether we need to apply A/C or not, and how cold to make it. We will use an LED to represent the A/C unit, and we'll assume that the fan is on at all times. The more the A/C is on, the colder the air will be, so we'll be pulsing the LED, and the greater the percentage of time that the LED is on, the colder the air is that we're representing.
 
-### Lab 8: Temperature logger  
+### Lab 8: Security System  
 **Objective:** Learn about arrays  
 **New Functions and Keywords:**  
-**Description:** We want to store temperature readings in an array that the user can browse through. When they push the start button, we will record ten temperature readings, spaced one second apart. The user will then be able to scroll through them using the buttons on the LCD shield.  
+**Description:** We will store a sequence of up, down, left, and right button pushes in an array as the password. The Arduino will start in an "unlocked" mode. When the select button is pushed, the Arduino will "lock" the security system. When the select button is pushed the next time, the user must enter the password exactly as it is in the array, otherwise the alarm will sound with a Piezo element and a red LED.
 
 ### Lab 9: Music Box  
 **Objective:** Learn about structs  
