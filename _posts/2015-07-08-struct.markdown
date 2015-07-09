@@ -19,10 +19,10 @@ Usage:
 		float y;
 		char *z;
 
-	}; //don't forget the semicoln!
+	}; //don't forget the semicolon!
 
 	MyStruct thing;
 
-	thing.x = 0;					//fields are refered to by name with the . operator
+	thing.x = 0;					//fields are referred to by name with the . operator
 	thing.y = 1.25;
 	thing.x = "This is my struct!";
