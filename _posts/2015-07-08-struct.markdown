@@ -21,7 +21,7 @@ Usage:
 
 	}; //don't forget the semicolon!
 
-	MyStruct thing;
+	MyStruct thing; //thing is a variable of type MyStruct, rather than int or something.
 
 	thing.x = 0;					//fields are referred to by name with the . operator
 	thing.y = 1.25;
