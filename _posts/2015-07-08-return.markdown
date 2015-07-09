@@ -5,7 +5,7 @@ date:   2015-07-08 15:37:30
 categories: docs
 ---
 
-	return
+	keyword: return
 
 This keyword is used to return a value from a function back to its caller. 
 
