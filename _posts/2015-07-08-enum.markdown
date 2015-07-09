@@ -5,3 +5,14 @@ date:   2015-07-08 15:37:30
 categories: docs
 ---
 
+	keyword: enum
+
+This keyword is used to create an enumerated data type. In other words, you're giving names to integers.
+
+You can specify an enum's type if you want. If you don't they will be of type int by default.
+You can also specify the values. If you don't the compiler will pick them for you, usually starting at 0 and going upwards.
+
+Usage:
+
+	enum MyEnum0 { ZERO, ONE, TWO };			//default int from zero
+	enum MyEnum2 : char { A = 'a', B = 'b' };	//this one is a char, and I'm specifying values
