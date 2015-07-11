@@ -1,0 +1,409 @@
+
+---------------------------------------------------------------------------------------------------
+
+	operator=
+
+This is the assignment operator. It takes what is on its right and stores it in what is on its left.
+
+Usage:
+
+	int x = 5;	//we set x to 5 with the assignment operator
+	int y = x;	//we set y to x with the assignment operator; y is now 5.
+
+---------------------------------------------------------------------------------------------------
+
+	operator+
+
+This is the addition operator. It takes the two values to its left and right, adds them, and returns the result.
+You usually want to store this result somewhere.
+
+
+
+Usage:
+
+	int x = 5;
+	int y = 7;
+	int z = x + y;	//z is now the result of x + y, or 12.
+
+---------------------------------------------------------------------------------------------------
+
+	operator-
+
+This operator has two uses: the subtraction operator, or the additive inverse operator.
+
+In the first case, it takes the right value, subtracts it from the left value, and returns it.
+In the second, it simply multiplies the value by -1.
+
+Usage:
+
+	int x = 7;
+	int y = 12;
+	int z = y - x;	//z is now the result of y - x, or 5
+
+	int a = -y;		//a is now the additive inverse of y, or -12;
+	int b = -32		//b is -32
+
+---------------------------------------------------------------------------------------------------
+
+	operator*
+
+This operator has two uses: the multiplication operator, and the pointer dereference operator.
+
+In the first case, it takes two values, multiplies them, and returns the result.
+In the second, it takes a pointer, dereferences it, and returns the dereferenced object.
+
+Usage:
+
+	int x = 5;
+	int y = 3;
+	int z = x * y;		//z is 5 * 3, or 15
+
+	int u = 2 * x;		//u is 2 * 5, or 10
+	int v = 3278 * 9;	//the compiler will do this for you and put it in v
+
+	int *a = new int;	//a points to an integer
+	*a = 12;			//a points to an integer that is now 5
+
+	int b = *a;			//the integer a points to is copied into b
+
+	delete a;
+
+---------------------------------------------------------------------------------------------------
+
+	operator/
+
+This is the division operator. It divides its left by its right, and returns the result.
+
+Usage:
+	
+	int a = 32;
+	int b = 4;
+	int c = a / b;		//c is now 8
+
+	int d = a / 16;		//d is now 2, this is okay too
+	int e = 1357 / 53;	//the compiler will do this math for you
+
+---------------------------------------------------------------------------------------------------
+
+	operator%
+
+This is the modulus operator. It takes its left, divides it by its right, and returns the remainder of the operation.
+It's return value will be the same sign as the quotient would have been.
+
+Usage:
+
+	int a = 35;
+	int b = 6;
+	int c = a % b;	//c is now 5
+
+	int d = -35;
+	int e = d % b;	//e is now -5
+
+---------------------------------------------------------------------------------------------------
+
+	operator++
+
+This is the increment operator. It increments a variable by one.
+It can be used in either postfix or prefix mode.
+In prefix, it increments the variable and returns that number.
+In postfix, it returns the number then increments it.
+
+Usage:
+
+	int a = 12;
+	a++;			//a is 13
+	++a;			//a is 14
+
+	int b = a++;	//b is 14, a is 15
+	int c = ++a;	//c is 16, a is 16
+
+---------------------------------------------------------------------------------------------------
+
+	operator--
+
+This is the decrement operator. It decreases a variable by one.
+It can be used in either prefix or postfix mode.
+In prefix, it decrements the variable and returns that number.
+In postfix, it returns the number then decrements it.
+
+Usage:
+
+	int a = 12;
+	a--;			//a is 11
+	--a;			//a is 10
+
+	int b = a--;	//b is 10, a is 9
+	int c = --a;	//c is 8, a is 8
+
+---------------------------------------------------------------------------------------------------
+
+	operator==, operator !=
+
+This is the equality operator (==). It tests two things for equality. IF equal, it returns true, otherwise false.
+It's counterpart (!=) returns the opposite
+
+Usage:
+
+	int a = 5;
+	int b = 7;
+
+	if (a == b){	//evaluates to false
+
+		//do something
+		//won't happen because a != b
+
+	} else if (a != b){	//evaluates to true
+
+		//do something else
+		will happen
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	operator>, operator>=
+
+The first one returns true if its left is greater than its right. (just like in math)
+The second one returns true if its left is greater than or equal to its right.
+
+Usage:
+
+	int a = 5; 
+	int b = 5;
+
+	if (a > b){
+
+		//do something
+		//will not happen
+
+	} else if (a >= b){
+
+		//this one will happen
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	operator<, operator<=
+
+These are the same as > and >=, except they return true for less than and less than or equal to.
+
+Usage:
+
+
+	int a = 7;
+	int b = 7;
+
+	if (a < b){
+
+		//will not happen
+
+	} else if (a <= b){
+
+		//will happen
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	operator!
+
+This is the logical not operator. It tales a value and returns its negation.
+
+Usage:
+
+	bool x = true;
+	bool y = !x;	//y is now false, the opposite of x
+	bool z = !y;	//z is now true, the opposite of y
+
+---------------------------------------------------------------------------------------------------
+
+	operator&&
+
+This is the logical AND operator. It returns true if both its left and right are true.
+This operator is what we call short-circuited. It will not evaluate its right-hand-side if its left is false.
+
+Usage:
+
+	bool x = true;
+	bool y = false;
+
+	if (x && y){	//evaluates to false, because y is false
+
+		//will not happen
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	operator||
+
+This is the logical OR operator. It returns true if either its left or right is true.
+This operator is what we call shour-circuited. It will not evaluate its left-hand-side if its right is true.
+
+Usage:
+
+	bool x = true;
+	bool y = false;
+
+	if (x || y){	//evaluates to true, because x is true.
+
+		//will happen
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	operator~
+
+This is the bitwise NOT operator. It flips the bits of a variable.
+
+Usage:
+
+	int x = 0x21;	//x has binary value of 0010 0001
+	int y = ~x;		//y has binary value of 1101 1110
+
+---------------------------------------------------------------------------------------------------
+
+	operator&
+
+This is the bitwise AND operator. It performs a bitwise AND on two values and returns that result.
+It is also the address operator. It takes a variable and returns its memory address.
+
+1 AND 1 is 1
+1 AND 0 is 0
+0 AND 1 id 0
+0 AND 0 is 0
+
+Usage:
+
+	int x = 0x64;	//x has binary value of 0110 0100
+	int y = 0x23;	//y has binary value of 0010 0011
+	int z = x & y;	//z has binary value of 0010 0000
+
+	int *a = &x;	//a is a pointer that points to x 
+
+---------------------------------------------------------------------------------------------------
+
+	operator|
+
+This is the bitwise OR operator. It performs a bitwise OR on two values and returns the result.
+
+1 OR 1 is 1
+1 OR 0 is 1
+0 OR 1 is 1
+0 OR 0 is 0
+
+Usage:
+
+	int x = 0x64;	//x has binary value of 0110 0100
+	int y = 0x23;	//y has binary value of 0010 0011
+
+	int z = x | y;	//z has binary value of 0110 0111
+
+---------------------------------------------------------------------------------------------------
+
+	operator^
+
+This is the bitwise XOR (exclusive OR) operator. It performs an exclusive OR on two values, and returns it.
+
+1 XOR 1 is 0
+1 XOR 0 is 1
+0 XOR 1 is 1
+0 XOR 0 is 0
+
+Usage:
+
+	int x = 0x64;	//x has binary value of 0110 0100
+	int y = 0x23;	//y has binary value of 0010 0011
+
+	int z = x ^ y;	//z has binary value of 0100 0111
+
+---------------------------------------------------------------------------------------------------
+
+	operator<<, operator>>
+
+These are the bitwise right and left shift operators. They takes the bits of a value and shift them left or right a number of times.
+The bits that ar shifted off are lost; bits shifted on are always 0
+
+Usage:
+
+	int x = 0x32;	//x has binary value of 0011 0010
+
+	int y = x << 3;	//y has binary value of 1001 0000
+
+	int z = x >> 4; //z has binary value of 0000 0011
+
+---------------------------------------------------------------------------------------------------
+
+	operator[]
+
+This is the array subscript operator. It is used to access elements in an array.
+
+C does not do bounds checking on arrays. If an array is of size 5, you better not ever access element #6 or greater.
+Negative array subscripts will result in what we call 'undefined behavior', which usually means a crash.
+
+Usage:
+
+	int *array = new int[2];	//x is now an array of 2 ints
+
+	array[0] = 5;		//the first element is now 5
+	array[1] = 67;		//the second element is now 67
+
+	int x = array[1];	//x is now 67
+
+---------------------------------------------------------------------------------------------------
+
+	operator.
+
+This is the member access operator. You use it to get to members of a struct or class.
+
+Usage:
+
+	struct Example {
+
+		int x;
+		float y;
+
+	};
+
+	Example z;	
+
+	z.x = 5;		//the member x of struct z is now 5
+	z.y = 12.75;	
+
+---------------------------------------------------------------------------------------------------
+
+	operator->
+
+This is the pointer member access operator. It is used to access the members of an object that you have a pointer to.
+
+Usage:
+
+	struct Example2 {
+
+		int x;
+		float y;
+
+	};
+
+	Example2 *z = new Example2;
+
+	z->x = 12;
+	z->y = 187.26;
+
+---------------------------------------------------------------------------------------------------
+
+	operator sizeof
+
+This is the sizeof operator. It returns the size, in bytes, of any data type.
+
+Usage:
+	
+	struct Example3;
+
+	int x = sizeof int;			//x now has the size of an int
+	int y = sizeof x;			//you can also get the size of a variable, which will return the size of its type
+	int z = sizeof Example3		//you can also get the size of a class or struct.
+
+---------------------------------------------------------------------------------------------------

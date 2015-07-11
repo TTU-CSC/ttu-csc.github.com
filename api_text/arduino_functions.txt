@@ -1,0 +1,299 @@
+
+	void setup();
+
+This is one of the two functions that you will need to write for any Arduino project. When the Arduino starts up, it calls this function ONCE and only once. 
+It's job is to perform any kinds of setup needed before the program's main loop starts. Some things you might do in this function are initialize libraries that need it, set pins to input or output modes, and putting the arduino in its starting state by setting certain pins to HIGH or LOW if needed.
+
+Usage:
+
+	void setup(){
+
+		//I'm going to use pins 1, 2, 3 as output pins
+		pinMode(1, OUTPUT);
+		pinMode(2, OUTPUT);
+		pinMode(3, OUTPUT);
+
+		//and 4 is an input
+		pinMode(4, INPUT);
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void loop();
+
+This is the second function you must write in each Arduino program. After the Arduino is finished with the setup() function, it calls this function forever until the Arduino is reset or turned off.
+This is where the most of your code will go for any project.
+
+Usage:
+
+	void setup(){
+
+		//setup code goes here
+
+	} 
+
+	void loop(){
+
+		//alternate pin 1 HIGH and LOW every second once a second.
+		//Imagine there's an LED linked to it, and it's blinking every second.
+		digitalWrite(1, HIGH);
+		delay(1000);
+		digitalWrite(1, LOW);
+		delay(1000);
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void pinMode(uint8_t pin, uint8_t mode);
+
+This function sets the pin specified to the mode specified.
+There are two modes you can use: INPUT and OUTPUT, for reading a value, or setting a value, respectivley.
+
+Usage:
+
+	//I want pin 5 to read, and pin 8 to write
+	pinMode(5, INPUT);
+	pinMode(8, OUTPUT);
+
+---------------------------------------------------------------------------------------------------
+
+	int digitalRead(uint8_t pin);
+
+This function reads a value from a pin and returns it.
+It will return either HIGH or LOW.
+
+If a pin is not connected to anything, this function will return nothing useful.
+If you read a pin that has not been set to INPUT, it will also not return anything useful.
+
+Usage:
+
+	//I want to know what pin 6 reads
+	int pin6Value = digitalRead(6);
+
+---------------------------------------------------------------------------------------------------
+
+	void digitalWrite(uint8_t pin, uint8_t value);
+
+This function writes a value (HIGH or LOW) to a pin.
+
+If you use this with a pin that is not set to output, it may not actually be set to the value requested.
+Do not use this with an input pin.
+
+Usage:
+
+	//I need to set pin 9 to HIGH
+	digitalWrite(9, HIGH);
+
+---------------------------------------------------------------------------------------------------
+
+	void analogReference(uint8_t value);
+
+This function sets the reference voltage for an analog pin, or the top voltage you expect to read from it.
+You have two options:
+
+	DEFAULT:	The default value for the board is used (5v)
+	EXTERNAL:	The current voltage applied to the AREF pin is used (0v - 5v ONLY)
+
+Usage:
+
+	//I want my analog reverence to be 3v, and it is being applied to the AREF pin
+	analogReference(EXTERNAL);
+
+	//some time passes
+	//now I want to use the default value again
+	analogReference(DEFAULT);
+
+---------------------------------------------------------------------------------------------------
+
+	int analogRead(uint8_t pin);
+
+This function reads the current voltage from an analoy pin, and returns 0 for 0v, 1024 for 5v, or somewhere inbetween for other voltages relative to the maximum.
+There are five analog pins.
+If you read a pin that is not connected to anything, the function will return nothing useful.
+
+Usage:
+	
+	//I want to know Pin 2's value
+	int pin2Value = analogRead(2);
+
+	//this is about the voltage read (warning: floating point operatinos are slow!)
+	float pin2Voltage = pin2Value / 1024.0;
+
+---------------------------------------------------------------------------------------------------
+
+	void analogWrite(uint8_t pin, int value);
+
+This function uses a digital pin to simulate analog output. It will Continue this until you call analogWrite() again, or a digitalRead() or digitalWrite on the same pin.
+It takes in a pin number to use, and what is refered to as the duty cycle as value, between 0 and 255.
+A value of 0 is always off, and 255 is always on.
+This function works with pins 3, 5, 6, 9, 10, 11. The max fewquency for them is 490Hz, except for pins 5 and 6; they are at 980Hz.
+You do not need to set a pin to either INPUT or OUTPUT to use this function.
+
+USAGE:
+
+	//I have an LED on pin 9, and a potentiometer on analog pin 3
+	//I want to flash the LED at varying speeds as you adjust the potentiometer
+	int value = analogRead(3);	//value is somewhere between 0 and 1024
+	analogWrite(8, value / 4);	//I need it to be between 0 and 255
+
+---------------------------------------------------------------------------------------------------
+
+	unsigned long millis();
+
+This function returns the number of milliseconds since the Arduino began running the current program.
+It can be used to time things.
+It will reset to zero after about 50 days.
+
+Usage:
+
+	unsigned long startTime = millis();
+
+	//do something that takes lots of time
+
+	unsigned long endTime = millis();
+
+	unsigned long elapsedTime = endTime - startTime;
+
+---------------------------------------------------------------------------------------------------
+
+	unsigned long micros();
+
+This function returns the number of microseconds since the Arduino began running the current program.
+It can be used to time things even quicker than a call to millis().
+Its value will reset after about 70 minutes.
+
+Usage:
+
+	unsigned long startTime = micros();
+
+	//do something very quick
+
+	unsigned long endTime = micros();
+
+	unsigned long elapsedTime = endTime - startTime;
+
+---------------------------------------------------------------------------------------------------
+
+	void delay(unsigned long time);
+
+This function delays the program the given number of milliseconds.
+
+Usage:
+
+	//alternate pin 1 HIGH and LOW every second once a second.
+	//Imagine there's an LED linked to it, and it's blinking every second.
+	digitalWrite(1, HIGH);
+	delay(1000);
+	digitalWrite(1, LOW);
+	delay(1000);
+
+---------------------------------------------------------------------------------------------------
+
+	void delayMicroseconds(unsigned int time);
+
+This function delays the program the slecified number of microseconds.
+It works accuratley for times of 4us to about 16,000us.
+If you want to delay for longer than a few thousand microseconds, use delay() instead.
+
+Usage:
+
+	//alternate pin 1 HIGH and LOW very fast
+	//Imagine there's an LED linked to it, and it's blinking every second.
+	digitalWrite(1, HIGH);
+	delayMicroseconds(100);
+	digitalWrite(1, LOW);
+	delayMicroseconds(100);
+
+---------------------------------------------------------------------------------------------------
+	
+	#define min(a,b) ((a)<(b)?(a):(b))
+
+This macro returns the minimum of two items. 
+It will work for any two things of the same type, as long as they have operator< overloaded for them.
+
+Usage:
+
+	int a = 5;
+	int b = 7;
+	int c = min(a, b);	//c is now a, which is 5
+
+---------------------------------------------------------------------------------------------------
+
+	#define max(a,b) ((a)>(b)?(a):(b))
+
+This macro returns the maximum of two items, as long as they ahve operator> overloaded for them.
+
+Usage:
+
+	int a = 5; 
+	int b = 7;
+	int c = max(a, b);	//c is now b, which is 7.
+
+---------------------------------------------------------------------------------------------------
+
+	#define abs(x) ((x)>0?(x):-(x))
+
+This macro takes the absolute value of a number.
+
+Usage:
+
+	int a = 3;
+	int b = -25;
+
+	int c = abs(a);	//c is 3
+	int d = abd(b);	//d is 25
+
+---------------------------------------------------------------------------------------------------
+
+	#define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
+
+This macro constrains a number bewtween a min and max value.
+It returns the value if it is between low and high, high if value is greater, and low it it is lower.
+
+Usage:
+	
+	const int MAX = 20;
+	const int MIN = 12;
+	
+	int a = 15;
+	int b = 5;
+	int c = 32;
+
+	int d = constrain(a, MIN, MAX);	//d is a, because a was between the values
+	int e = constrain(b, MIN, MAX);	//e is MIN, because b was less than MIN
+	int f = constrain(c, MIN, MAX);	//f is MAX, becuase c was greater than MAX
+
+---------------------------------------------------------------------------------------------------
+
+	void randomSeed(unsigned long seed);
+
+This function seeds the random number generator with a given seed.
+It can be called without an argument to use a random seed.
+If the random number generator is seeded with the same seed, it will produce the same set of random numbers each time.
+You should call this function in setup() if you need random numnbers in the prograrm.
+
+Usage:
+
+	void setup(){
+
+		//other setup code...
+		randomSeed();
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	long random(long max);
+	long random(long min, long max);
+
+This function returns a random number from 0 to max - 1, or between min and max.
+You should call randomSeed() in setup() before using the random number generator.
+
+Usage:	
+
+	long randomNumber1 = random(1000); 		//randomNumber1 is somewhere between 0 and 1000.
+	long randomNumber2 = random(100, 500);	//randomNumber2 is somewhere berween 100 and 500.
+
+---------------------------------------------------------------------------------------------------
