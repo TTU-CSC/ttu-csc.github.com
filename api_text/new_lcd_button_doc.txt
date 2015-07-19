@@ -1,0 +1,114 @@
+
+In order to read the buttons from the shield, you'll need to install the following library from http://www.dfrobot.com/image/data/DFR0009/DFR_Key.zip.
+
+To use the library, include the following header:
+
+#include <DFR_Key.h>
+
+The DFR_Key class has the following public interface:
+
+#define SAMPLE_WAIT -1
+#define NO_KEY 0
+#define UP_KEY 3
+#define DOWN_KEY 4
+#define LEFT_KEY 2
+#define RIGHT_KEY 5
+#define SELECT_KEY 1
+
+class DFR_Key {
+  
+public:
+
+	DFR_Key();
+	int getKey();
+	void setRate(int rate);
+
+}
+
+Function Descriptions:
+---------------------------------------------------------------------------------------------------
+
+	DFR_Key::DFR_Key();
+
+This is the constructor for the object. It sets up the interface for you.
+You should only ever have one of these in your program.
+
+Usage:
+
+	DFR_Key keypad;
+
+---------------------------------------------------------------------------------------------------
+
+	int DFR_Key::getKey();
+
+This function returns the key that is currently pressed, corresponding to the #define statememnts:
+
+	#define SAMPLE_WAIT -1
+	#define NO_KEY 0
+	#define UP_KEY 3
+	#define DOWN_KEY 4
+	#define LEFT_KEY 2
+	#define RIGHT_KEY 5
+	#define SELECT_KEY 1
+
+Usage:
+
+	DFR_Key keypad;
+
+	
+	void loop(){
+
+		int key = keypad.getKey();
+
+		if (key == SAMPLE_WAIT){
+
+			//keypad is waiting
+
+		} else if (key == NO_KEY){
+
+			//no key is pressed
+
+		} else if (key == UP_KEY){
+
+			//up was pressed
+
+		} else if (key == DOWN_KEY){
+
+			//down was pressed
+
+		} else if (key == LEFT_KEY){
+
+			//left was pressed
+
+		} else if (key == RIGHT_KEY){
+
+			//right was pressed
+
+		} else {
+
+			//select was pressed
+
+		}
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
+	void DFR_Key::setRate(int rate);
+
+This function sets the rate at which the object will sample the keypad, in milliseconds.
+If the keypad is sampled during the wait period, getKey() will return SAMPLE_WAIT.
+
+Usage:
+
+	DFR_Key keypad;
+
+	void setup(){
+
+		//sample the keypad every 10 milliseconds
+		keypad.setRate(10);
+
+	}
+
+---------------------------------------------------------------------------------------------------
+
