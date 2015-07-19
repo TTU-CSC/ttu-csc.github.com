@@ -47,12 +47,12 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **New Functions and Keywords:** `analogWrite`  
 **Description:** We're going to simulate a thermostat, reading the temperature of the surrounding environment to decide whether we need to apply A/C or not, and how cold to make it. We will use an LED to represent the A/C unit, and we'll assume that the fan is on at all times. The more the A/C is on, the colder the air will be, so we'll be pulsing the LED, and the greater the percentage of time that the LED is on, the colder the air is that we're representing.
 
-### Lab 8: Security System  
+### [Lab 8: Security System]({% post_url 2015-07-19-lab-8-security-system %})  
 **Objective:** Learn about arrays  
 **New Functions and Keywords:**  
 **Description:** We will store a sequence of up, down, left, and right button pushes in an array as the password. The Arduino will start in an "unlocked" mode. When the select button is pushed, the Arduino will "lock" the security system. When the select button is pushed the next time, the user must enter the password exactly as it is in the array, otherwise the alarm will sound with a Piezo element and a red LED.
 
-### Lab 9: Music Box  
+### [Lab 9: Music Box](% post_url 2015-07-19-lab-9-music-box %})  
 **Objective:** Learn about structs  
 **New Functions and Keywords:**  
 **Description:** Using an array of structs that consist of a frequency and a length, students will play songs.  
