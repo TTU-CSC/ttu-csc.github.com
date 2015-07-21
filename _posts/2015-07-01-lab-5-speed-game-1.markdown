@@ -20,4 +20,6 @@ There are only two pieces of information you need to complete this lab that you 
 
 The tri-color LED is really just 3 LEDs in one package. There is nothing special about it. It has four pins, three of which are cathodes, and one of which is the common anode. The longest pin is the common anode, which means that it will be connected to 5 volts. The lone pin beside it is the red cathode, the pin on the other side is blue, and the pin farther away is green. Each cathode should be connected to a 560 ohm resistor, and then the output of that resistor connected to a pin on the Arduino. When the output on that pin is HIGH, there is no voltage difference between the input and the output, so the LED will be off. When the output is LOW, electricity can drain through the LED into the pin on the Arduino. So, by default, you should keep the LED pins for the tri-color HIGH, and then turn each one LOW whenever you want to turn it on.
 
+Connect one button each to `pin 2` and `pin 5`. Connect one 560 ohm resistor in series with one LED to `pin 3`. Repeat for `pin 6`. Repeat that procedure for each cathode of the tri-color LED, connecting to `pins 7 through 9`. Connect the anode to `5V`. `pin 2` and `pin 3` are for Player 1, and `pin 5` and `pin 6` are for Player 2.
+
 Good luck!
