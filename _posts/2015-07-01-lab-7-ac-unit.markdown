@@ -7,6 +7,9 @@ categories: docs
 
 For this lab, we want to design a simple thermostat for an air conditioner. We're going to use the tri-color LED, a temperature sensor, and the LCD Shield.
 
+This is the circuit layout for this week, for everything but the LCD shield:
+![Lab 7 diagram]({{site.url}}/images/lab_7.jpg)
+
 Since this is an analog temperature sensor, you simply need to do an `analogRead` to see how the temperature is affecting the voltage output. The formula to convert the voltage to temperature is simple:  `Temperature in °C = (millivolts - 500) / 10`. To get `millivolts`, `millivolts = (5000.0/1024.0) * analogRead(some_pin_number);`
 
 Pulse Width Modulation, PWM, is a technique for imitiating an analog output. Since an output pin can *only* ever be HIGH or LOW, you cannot ouput 3.5 volts, for instance. However, with PWM, you can *average* 3.5 volts on a particular output pin. This works by turning the output on and off *really fast*, and leaving it on for a different length of time than you leave it off. For 2.5 volts, it would just turn it on and off really quickly, but for 3.5 volts, it will stay "on" for longer than it stays "off", and so if you averaged the output value it would be 3.5 volts. This lets us adjust the brightness of an LED in software. For Arduino, in fact, the technique is called `analogWrite`, and it works on pins 3, 5, 6, 9, 10, and 11. So, for this lab, make sure that the red and blue cathodes of your tri-color LED are connected to two of those pins.
