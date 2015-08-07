@@ -85,6 +85,9 @@ As you can see, the different major types all do approximately the same thing, b
 The Lab
 =======
 
+This is the circuit layout for this week:
+![Lab 4 diagram]({{site.url}}/images/lab_4.jpg)
+
 For this lab, we will have three LEDs connected to the Arduino, one each on `pin 3`, `pin 4`, and `pin 5`. There should be a button connected to `pin 2`. If we imagine that this is a water bottle filling station, it would be nice to have some LEDs blinking to draw attention to it. While no one is pushing the button to dispense water, we want to blink all of the LEDs in sequence once per second, from left to right. But, while someone is pushing the button we will blink all of them (effectively) at the same time on and then off, repeating, once per second. 
 
 For this prototype of the LED system, we are only using 3 LEDs, but there is discussion that the production version could use upwards of 20 LEDs. It is conceivable that you could write a line of code for each LED to turn it on and then to turn it off when there are only 3, but it will quickly become unmaintainable on the production version, so you should use a `for` loop. A `for` loop is excellent for this, because it will repeat an action over a precisely known set of times.
