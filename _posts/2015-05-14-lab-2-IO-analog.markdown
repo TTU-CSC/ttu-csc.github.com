@@ -7,7 +7,7 @@ categories: docs
 This lab will focus on changing the previous lab to use an analog input, and replacing one of the LEDs with a piezoelectric speaker.
 
 This is the circuit layout for this week:
-<Insert fritzing diagram here>
+![Lab 2 diagram]({{site.url}}/images/lab_2.jpg)
 
 The first LED from last lab is still connected to `pin 4`, but now the second LED has been replaced with a piezoelectric speaker connected to `pin 5`, and the button has been replaced by a potentiometer. Note that we no longer need a resistor connected to pin 5 because piezo elements don't form a short circuit when they're on. The potentiometer is also connected to `A0`, analog input 0, rather than pin 3, and there are some other changes to the circuit there.
 
