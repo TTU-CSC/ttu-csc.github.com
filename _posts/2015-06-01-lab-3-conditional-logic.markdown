@@ -8,7 +8,7 @@ categories: docs
 In this lab, we'll be adding two pushbuttons to the previous lab and using them to affect the output *conditionally*. (i.e. according to various rules)
 
 This is the circuit layout for this week:
-<Insert fritzing diagram here>
+![Lab 3 diagram]({{site.url}}/images/lab_3.jpg)
 
 We're now connecting button 1 to `pin 2` and button 2 to `pin 3`.
 
@@ -89,6 +89,6 @@ The Lab (Part 2)
 
 In this part of the lab, we want to make use of Logical Conjunction to make our Arduino do things it couldn't do before. Simply put, we want to see you implement the following scenario:
 
-`if` button 1 is being pushed AND the calculated analog value is greater than 35, then blink the LED in the same way that we're toggling the Piezo element. `else`, we want to toggle the Piezo element like normal. This way, the user can push button 1 when they would like to see the timing of the toggling displayed visually, but we protect them from it blinking too fast.
+`if` button 1 is being pushed AND the calculated analog value is greater than 35, then blink the LED in the same way that we're toggling the Piezo element. `else`, we want to toggle the Piezo element like normal. This way, the user can push button 1 when they would like to see the timing of the toggling displayed visually, but we "protect" them from it blinking too fast.
 
 The final thing we want to do is change it so that there is a third conditional in that `if` statement. `if` button 2 is being pushed, we want to blink the LED no matter how fast it is going, and we also don't care if they're pushing button 1. So, `if ((conditional1 && conditonal2) || conditional3)` is essentially what it will look like.
