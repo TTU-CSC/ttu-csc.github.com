@@ -18,16 +18,44 @@ The only new information you need is to be able to read the buttons on the LCD s
 
 To clear the LCD screen, simply say `lcd.clear()` and `lcd.setCursor(0, 0)`.
 
-To read the buttons, we will use this code:
+To read the buttons, copy and paste the following code<sup>[1]</sup> at the top of your file:
 
-    uint8_t buttons = lcd.readButtons();
-    if (buttons & BUTTON_UP) //note the bitwise AND (&), this is not the logical AND (&&)
+    enum keycodes
     {
-    	//the up button was pushedm, do something here.
+        btnUP,
+        btnDOWN,
+        btnLEFT,
+        btnRIGHT,
+        btnSELECT
+    }
+    
+    int read_LCD_buttons()
+    {
+     adc_key_in = analogRead(0);      // read the value from the sensor 
+     // my buttons when read are centered at these valies: 0, 144, 329, 504, 741
+     // we add approx 50 to those values and check to see if we are close
+     if (adc_key_in > 1000) return btnNONE; // We make this the 1st option for speed reasons since it will be the most likely result
+     // For V1.1 us this threshold
+     if (adc_key_in < 50)   return btnRIGHT;  
+     if (adc_key_in < 250)  return btnUP; 
+     if (adc_key_in < 450)  return btnDOWN; 
+     if (adc_key_in < 650)  return btnLEFT; 
+     if (adc_key_in < 850)  return btnSELECT;  
+     return btnNONE;  // when all others fail, return this...
     }
 
-`BUTTON_UP` represents the up button, but other options include `BUTTON_DOWN`, `BUTTON_LEFT`, `BUTTON_RIGHT`, and `BUTTON_SELECT`.
+then in your code you can use this function by using code similar to the following:
 
-I recommend using BUTTON_LEFT and BUTTON_RIGHT for the two user buttons, but you can use whichever ones seem most appropriate.
+    int button = read_LCD_buttons();
+    if (button == btnUP)
+        //do something for the up button being pushed
+    
+and `button` will now have the keycode for the button that was pushed.
+
+`btnUP` represents the up button, but other options include `btnDOWN`, `btnLEFT`, `btnRIGHT`, and `btnSELECT`.
+
+I recommend using btnLEFT and btnRIGHT for the two user buttons, but you can use whichever ones seem most appropriate.
 
 Good luck!
+
+<sup>[1]</sup> button code is adapted from the [LCD shield's documentation](https://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_\(SKU:_DFR0009\)#Example_use_of_LiquidCrystal_library)
