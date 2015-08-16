@@ -52,7 +52,7 @@ and `button` will now have the keycode for the button that was pushed.
 
 `btnUP` represents the up button, but other options include `btnDOWN`, `btnLEFT`, `btnRIGHT`, and `btnSELECT`.
 
-I recommend using btnLEFT and btnRIGHT for the two user buttons, but you can use whichever ones seem most appropriate.
+I recommend using `btnLEFT` and `btnRIGHT` for the two user buttons, but you can use whichever ones seem most appropriate.
 
 Good luck!
 
