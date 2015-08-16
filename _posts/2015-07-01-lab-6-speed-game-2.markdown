@@ -32,14 +32,14 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
     
     int read_LCD_buttons()
     {
-         adc_key_in = analogRead(0);
-         if (adc_key_in > 1000) return btnNONE;
-         if (adc_key_in < 50)   return btnRIGHT;  
-         if (adc_key_in < 250)  return btnUP; 
-         if (adc_key_in < 450)  return btnDOWN; 
-         if (adc_key_in < 650)  return btnLEFT; 
-         if (adc_key_in < 850)  return btnSELECT;  
-         return btnNONE;
+        adc_key_in = analogRead(0);
+        if (adc_key_in > 1000) return btnNONE;
+        if (adc_key_in < 50)   return btnRIGHT;  
+        if (adc_key_in < 250)  return btnUP; 
+        if (adc_key_in < 450)  return btnDOWN; 
+        if (adc_key_in < 650)  return btnLEFT; 
+        if (adc_key_in < 850)  return btnSELECT;  
+        return btnNONE;
     }
 
 then in your code you can use this function by using code similar to the following:
