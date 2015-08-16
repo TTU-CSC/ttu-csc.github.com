@@ -14,7 +14,7 @@ The goal of this lab is to build the speed game another way. The gameplay should
 - when one user presses their button after this point, the LCD should show a message indicating both that the game is over and who won.
 - wait 2 seconds, then start it all over.
 
-The only new information you need is to be able to read the buttons on the LCD shield, but if you need to remember how to set it up and write to the LCD, feel free to [review the first tutorial]({% post_url 2015-05-11-getting-started %}).
+The only new information you need is to be able to read the buttons on the LCD shield, but if you don't remember how to set it up and write to the LCD, feel free to [review the first tutorial]({% post_url 2015-05-11-getting-started %}).
 
 To clear the LCD screen, simply say `lcd.clear()` and `lcd.setCursor(0, 0)`.
 
@@ -26,22 +26,20 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
         btnDOWN,
         btnLEFT,
         btnRIGHT,
-        btnSELECT
+        btnSELECT,
+        btnNONE
     }
     
     int read_LCD_buttons()
     {
-     adc_key_in = analogRead(0);      // read the value from the sensor 
-     // my buttons when read are centered at these valies: 0, 144, 329, 504, 741
-     // we add approx 50 to those values and check to see if we are close
-     if (adc_key_in > 1000) return btnNONE; // We make this the 1st option for speed reasons since it will be the most likely result
-     // For V1.1 us this threshold
-     if (adc_key_in < 50)   return btnRIGHT;  
-     if (adc_key_in < 250)  return btnUP; 
-     if (adc_key_in < 450)  return btnDOWN; 
-     if (adc_key_in < 650)  return btnLEFT; 
-     if (adc_key_in < 850)  return btnSELECT;  
-     return btnNONE;  // when all others fail, return this...
+         adc_key_in = analogRead(0);
+         if (adc_key_in > 1000) return btnNONE;
+         if (adc_key_in < 50)   return btnRIGHT;  
+         if (adc_key_in < 250)  return btnUP; 
+         if (adc_key_in < 450)  return btnDOWN; 
+         if (adc_key_in < 650)  return btnLEFT; 
+         if (adc_key_in < 850)  return btnSELECT;  
+         return btnNONE;
     }
 
 then in your code you can use this function by using code similar to the following:
