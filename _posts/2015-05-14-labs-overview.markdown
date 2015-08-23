@@ -14,12 +14,12 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 ### [Lab 1: I/O]({% post_url 2015-05-12-lab-1-IO %})  
 **Objective:** Learn how to use a microcontroller to interact with the real world, through buttons and LEDs.  
-**New Functions and Keywords:** `pinMode`, `digitalRead`, `digitalWrite`, `bool`  
+**New Functions and Keywords:** `pinMode`, `digitalRead`, `digitalWrite`, [`bool`](% post_url 2015-07-08-bool %})  
 **Description:** In this lab, you will construct a simple circuit that consists of a button and two LEDs. When the button isn't being pressed, one LED is on and the other is off. However, while the button is being pressed, the LEDs should switch state. This shows how to use one input, a button, and two outputs.
 
 ### [Lab 2: I/O with Analog and Arithmetic]({% post_url 2015-05-14-lab-2-IO-analog %})  
 **Objective:** This lab teaches you how to deal with analog inputs.  
-**New Functions and Keywords:** `analogRead`, `delay`, `booleans: true/false/HIGH/LOW`  
+**New Functions and Keywords:** `analogRead`, `delay`, [`booleans: true/false/HIGH/LOW`](% post_url 2015-07-08-bool %})  
 **Description:** Analog inputs are signals that aren't just binary, 1 or 0. These inputs cover a range of values, defined by the *voltage* being sensed at the analog input. In this lab, you will use an analog input from a potentiometer to control a piezoelectric speaker's frequency of output. You will also do some arithmetic to make the system behave in a more pleasant way.
 
 ### [Lab 3: Conditional Logic]({% post_url 2015-06-01-lab-3-conditional-logic %})  
