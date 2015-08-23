@@ -1,44 +1,10 @@
 ---
 layout: post
-title:  "Keyword Help: while, do"
+title:  "Hardware Help: Piezo Element"
 date:   2015-07-08 15:37:30
 categories: docs
 ---
 
-	while, do
+	Piezo Element
 
-These keywords are used for looping. The general syntax is:
-
-	while (<expr>){
-
-		//do this over and over again until <expr> is false
-
-	}
-
-	do {
-
-		//do this once, then check <expr>, and keep doing until it is false
-
-	} while (<expr>);
-
-where <expr> is a boolean expression.
-
-The first of the above is called a while loop. It will execute the statements between the {} until its condition is false.
-
-The second loop is a do-while loop. It will ALWAYS execute the statements in the {} once, then check the expression, and behave as a while loop from there on out.
-
-Usage:
-
-	bool done = false;
-
-	while (!done){
-
-		//do something, eventually setting done to true
-
-	}
-
-	do {
-
-		//done is currently true, so this will happen only once.
-
-	} while (!done);
+A piezo element is a device that can act as either a speaker or a (really bad) microphone. In our labs, we use it as a simple speaker. When 5V is applied across it, the element inside moves up, and when the voltage is brought to 0V, is moves back down. If you toggle the voltage really quickly, you'll get sound out of it. The rate at which you toggle it determines the frequency.

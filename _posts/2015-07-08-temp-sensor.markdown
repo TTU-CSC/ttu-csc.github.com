@@ -1,44 +1,12 @@
 ---
 layout: post
-title:  "Keyword Help: while, do"
+title:  "Hardware Help: Temperature Sensor"
 date:   2015-07-08 15:37:30
 categories: docs
 ---
 
-	while, do
+	Temperature Sensor
 
-These keywords are used for looping. The general syntax is:
+The temperature sensor we use in this lab is the venerable TMP36. First announced around February 1st of 2001 by Analog Devices, this is an extremely easy to use, reliable, and inexpensive temperature sensor! Since there are no digital components to it at all, it outputs an analog value representing the current temperature.
 
-	while (<expr>){
-
-		//do this over and over again until <expr> is false
-
-	}
-
-	do {
-
-		//do this once, then check <expr>, and keep doing until it is false
-
-	} while (<expr>);
-
-where <expr> is a boolean expression.
-
-The first of the above is called a while loop. It will execute the statements between the {} until its condition is false.
-
-The second loop is a do-while loop. It will ALWAYS execute the statements in the {} once, then check the expression, and behave as a while loop from there on out.
-
-Usage:
-
-	bool done = false;
-
-	while (!done){
-
-		//do something, eventually setting done to true
-
-	}
-
-	do {
-
-		//done is currently true, so this will happen only once.
-
-	} while (!done);
+The formula that governs this converison is straight forward: `Temp in °C = [(Vout in mV) - 500] / 10` ([source](https://learn.adafruit.com/tmp36-temperature-sensor)).
