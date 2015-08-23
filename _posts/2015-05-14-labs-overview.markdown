@@ -24,12 +24,12 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 
 ### [Lab 3: Conditional Logic]({% post_url 2015-06-01-lab-3-conditional-logic %})  
 **Objective:** Through this lab, you will learn to use more complex conditional logic effectively.  
-**New Functions and Keywords:** `if`, `conditionals: ==, !=, <, <=, >, >=`, `expression`  
+**New Functions and Keywords:** [`if`](% post_url 2015-07-08-ifelse %}), `conditionals: ==, !=, <, <=, >, >=`, `expression`  
 **Description:** Conditional Logic is a tool you will use to connect different results to different limiting factors, known as conditions. *If* a user presses a button *and* a user has pressed the other button *then* we will turn on this LED.
 
 ### [Lab 4: Loops]({% post_url 2015-06-02-lab-4-loops %})  
 **Objective:** To familiarize you with a useful tool to cut down on writing the same code over and over.  
-**New Functions and Keywords:** `while`, `for`, `do..while`   
+**New Functions and Keywords:** [`while`](% post_url 2015-07-08-while %}), `for`, [`do..while`](% post_url 2015-07-08-while %})   
 **Description:** A loop is a structure that allows you to have the same piece of code happen over and over until some condition is false. There are different kinds of loops, and this lab will show you why they are useful. While a button is not pressed, blink three LEDs in an enticing manner. Once the button is pressed, blink all of the LEDs simultaneously on and simultaneously off.
 
 ### [Lab 5: Speed Game (part 1)]({% post_url 2015-07-01-lab-5-speed-game-1 %})  
