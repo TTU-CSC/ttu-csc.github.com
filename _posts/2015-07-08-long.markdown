@@ -1,17 +1,26 @@
 ---
 layout: post
-title:  "Keyword Help: int"
+title:  "Function Help: long"
 date:   2015-07-08 15:37:30
 categories: docs
 ---
 
-This keyword defines a long integer which is a signed number that is a minimum of 32-bits long. A 32-bit integer can hold numbers between -2,147,483,648 and 2,147,483,647. For legacy reasons, `long` is actually the same size as `int` on most platforms besides Arduino, and you have to use `long long` to get a real `long` there. On Arduino, `long` is sufficient to get an integer double the size of `int`. `long long` on Arduino will yield a 64-bit integer, which is enormous. See [Performance Considerations]({% post_url 2015-07-08-performance-considerations %}) for things you should watch out for when writing software.
+	long
 
-It can also be used as a modifier to other data types, usually doubling their size.
+	unsigned long micros();
+
+This function returns the number of microseconds since the Arduino began running the current program.
+It can be used to time things even quicker than a call to millis().
+Its value will reset after about 70 minutes.
 
 Usage:
 
-	long x = 12345678;		
-	long int y = -12345678;	//can also be used in this fashion
-	long double z = 1.123456;
-	long long  ll = 123456;	//a very large number
+	unsigned long startTime = micros();
+
+	//do something very quick
+
+	unsigned long endTime = micros();
+
+	unsigned long elapsedTime = endTime - startTime;
+
+
