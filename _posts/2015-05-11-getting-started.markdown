@@ -36,7 +36,7 @@ Now that the Arduino IDE is installed, it is time to make sure everything is wor
 
 If your Arduino IDE is configured correctly and your Arduino is plugged in, you should have an LED blinking on it now.
 
-We want to check the LCD Shield, so plug it into the Arduino now, and we'll create a short little program to use it.
+We want to check the LCD Shield, so plug it into the Arduino now, and we'll create a short little program to use it. When you connect the LCD Shield, it should fit down all the way onto the Arduino, with little or no copper from the pins showing after being pushed into the socket. This may take some force, just be careful not to break anything.
 
 Create a new sketch by clicking on File -> New. Before the first line, which says `void setup() {`, we want to put these lines:
 
