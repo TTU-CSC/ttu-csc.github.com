@@ -32,6 +32,7 @@ Now that the Arduino IDE is installed, it is time to make sure everything is wor
 
 1. Open the IDE
 2. Go to File -> Examples -> 01.Basics -> Blink
+3. Go to Tools -> Serial Port and then click on the Arduino
 3. Click the button in the toolbar that looks like an arrow facing to the right.
 
 If your Arduino IDE is configured correctly and your Arduino is plugged in, you should have an LED blinking on it now.
@@ -49,6 +50,8 @@ That last line of code will make a new variable called `lcd` that will handle al
     lcd.print("Hello, World!");
 
 If you run the code now, you should see Hello, World on your shield! If not, we need to figure out why.
+
+Submit your code to Dropbox.
 
 [ArduinoIDE]:         http://www.arduino.cc/en/Main/Software
 [Instructions]:       http://www.arduino.cc/en/Guide/Windows#toc4
