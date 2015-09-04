@@ -12,6 +12,8 @@ Connect them like this:
 
 The first button is connected to pin 3, LED 1 is connected to pin 4, and LED 2 is connected to pin 5.
 
+**please note: LEDs are polarized, the long leg must be connected to the positive voltage. The short leg must be connected to the resistor that connects to ground. It will not turn on otherwise. Also, the buttons are already properly sized. Do not try to spread the legs further -- that will only make things harder. The diagram above is meant to show you which things connect together, the exact number of rows and columns is not important.**
+
 For this lab, we're going to start out by just using LED 1 and the button. After we get LED 1 working, we'll add LED 2 into the mix to make it a little more interesting.
 
 Whenever the button is being pushed, we want LED 1 to turn on, but any time that the button is not being pushed, we want LED 1 to be turned off. On the Arduino, we can use a command (a function) called `digitalRead`. This will look at a pin and tell us whether it sees 5 volts or not. If the button is being pushed, pin 3 will have 5 volts flowing to it from the power supply. This is equivalent to `1` in binary.
