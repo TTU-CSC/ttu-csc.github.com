@@ -10,7 +10,7 @@ It's time for a fun lab! For this lab, we're going to need two buttons, two norm
 The goal of this lab is to build a speed game. The gameplay should be as follows:
 
 - set the tri-color LED to red
-- wait for a random (but still reasonable) amount of time
+- wait for a random amount of time (no more than 10 seconds)
 - set the tri-color LED to green
 - whenever a user presses their button after this point, the tri-color LED changes to blue to signify the game is over, and the LED in front of that user turns on to let them know that they were the winner.
 - wait 2 seconds, then reset the tri-color to red and start over
