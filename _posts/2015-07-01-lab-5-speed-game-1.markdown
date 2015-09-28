@@ -8,6 +8,7 @@ categories: docs
 It's time for a fun lab! For this lab, we're going to need two buttons, two normal LEDs, and the big tri-color LED.
 
 The goal of this lab is to build a speed game. The gameplay should be as follows:
+
 - set the tri-color LED to red
 - wait for a random (but still reasonable) amount of time
 - set the tri-color LED to green
