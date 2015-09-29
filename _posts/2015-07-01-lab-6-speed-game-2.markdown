@@ -20,7 +20,7 @@ To clear the LCD screen, simply say `lcd.clear()` and `lcd.setCursor(0, 0)`.
 
 To read the buttons, copy and paste the following code<sup>[1]</sup> at the top of your file:
 
-    enum keycodes
+    enum Keycodes : int
     {
         btnUP,
         btnDOWN,
@@ -28,11 +28,11 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
         btnRIGHT,
         btnSELECT,
         btnNONE
-    }
+    };
     
-    int read_LCD_buttons()
+    Keycodes read_LCD_buttons()
     {
-        adc_key_in = analogRead(0);
+        int adc_key_in = analogRead(0);
         if (adc_key_in > 1000) return btnNONE;
         if (adc_key_in < 50)   return btnRIGHT;  
         if (adc_key_in < 250)  return btnUP; 
