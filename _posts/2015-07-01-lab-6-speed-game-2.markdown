@@ -31,7 +31,7 @@ To read the buttons, copy and paste the following code<sup>[1]</sup> at the top 
         btnNONE
     };
     
-    Keycodes read_LCD_buttons()
+    int read_LCD_buttons()
     {
         int adc_key_in = analogRead(0);
         if (adc_key_in > 1000) return btnNONE;
