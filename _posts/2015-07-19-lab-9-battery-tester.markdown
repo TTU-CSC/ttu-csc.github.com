@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lab 10: Battery Tester"
+title:  "Lab 9: Battery Tester"
 date:   2015-07-19 13:15:30
 categories: docs
 ---

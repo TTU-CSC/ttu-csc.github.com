@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Lab 9: Music Box"
+title:  "Lab 10: Music Box"
 date:   2015-07-19 13:10:30
 categories: docs
 ---

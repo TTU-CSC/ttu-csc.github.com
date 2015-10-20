@@ -52,13 +52,13 @@ Throughout the semester, there will be a variety of labs. Here, we will provide 
 **New Functions and Keywords:** `arrays`  
 **Description:** We will store a sequence of up, down, left, and right button pushes in an array as the password. The Arduino will start in an "unlocked" mode. When the select button is pushed, the Arduino will "lock" the security system. When the select button is pushed the next time, the user must enter the password exactly as it is in the array, otherwise the alarm will sound with a Piezo element and a red LED.
 
-### [Lab 9: Music Box]({% post_url 2015-07-19-lab-9-music-box %})  
+### [Lab 9: Battery Tester]({% post_url 2015-07-19-lab-9-battery-tester %})  
+**Objective:** Do something interesting and practical    
+**Description:** Using the Arduino's built-in analog input hardware, we will create a simple alkaline battery tester to tell us how much charge is left in the battery!  
+
+### [Lab 10: Music Box]({% post_url 2015-07-19-lab-10-music-box %})  
 **Objective:** Learn about structs and arrays of structs  
 **New Functions and Keywords:** [`struct`]({% post_url 2015-07-08-struct %})  
 **Description:** Using an array of structs that consist of a frequency and a length, students will play songs.  
-
-### [Lab 10: Battery Tester]({% post_url 2015-07-19-lab-10-battery-tester %})  
-**Objective:** Do something interesting and practical    
-**Description:** Using the Arduino's built-in analog input hardware, we will create a simple alkaline battery tester to tell us how much charge is left in the battery!  
 
 ### Labs 11 and 12 will be free form, see syllabus for more details.
