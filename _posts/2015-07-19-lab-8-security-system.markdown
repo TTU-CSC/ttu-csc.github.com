@@ -40,3 +40,5 @@ followed by another one that will check the values:
     }
 
 if one of the values doesn't match up, then we should `break` out of the loop and start the 5-second error sequence before returning to the locked state.
+
+(NOTE: Make sure that you have a comment at the top of your lab containing your password combination.)
