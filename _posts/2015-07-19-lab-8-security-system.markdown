@@ -134,11 +134,12 @@ This week, we are providing a code template for you, since this lab is a little 
        * key presses and compare them to the password
        * stored in correctPassword. It should provide
        * visual feedback on the LCD in the form of a
-       * single asterisk/star "*" character each time
-       * the user presses a button. Even if they get
-       * the password wrong, you still need to listen
-       * to all of their keypresses. This way they don't
-       * know which key was wrong.
+       * single asterisk/star "*" character on the
+       * second line of the LCD each time the user
+       * presses a button. Even if they get the
+       * password wrong, you still need to listen
+       * to all of their keypresses. This way they
+       * don't know which key was wrong.
        * 
        * Once the password entry is complete, you should
        * return either true or false depending on if the
