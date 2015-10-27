@@ -19,7 +19,7 @@ and then begin flashing the red LED quickly and running the piezoelectric buzzer
 
 To do this, you will want to use an array to store the button sequence. To do this, simply initialize an array like so:
 
-    int correctPassword[] = { btnUP, btnLEFT, btnLEFT, btnUP };
+    int passwd[] = { btnUP, btnLEFT, btnLEFT, btnUP };
 
 or whatever sequence you would like. In order to check the password the user enters against it, we will need an array to hold their attempt (that way they don't know which button push was wrong).
 
@@ -36,7 +36,8 @@ followed by another one that will check the values:
 
     for (int i = 0; i < 4; i++)
     {
-    	//check each value in attempt against the correctPassword array
+    	//check each value in 'attempt' against the
+    	//password array that was passed into this function
     }
 
 if one of the values doesn't match up, then we should `break` out of the loop and start the 5-second error sequence before returning to the locked state.
