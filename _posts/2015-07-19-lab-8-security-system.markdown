@@ -76,6 +76,10 @@ This week, we are providing a code template for you, since this lab is a little 
               return btnNONE;
           }
           
+          //This function will return the key code that was
+          //pressed. This is particularly useful if you ask
+          //it to wait for btnANY, since you want to know
+          //which key was pressed.
           int waitForKey(int keyCode)
           {
               //loop until the desired key has been pressed,
