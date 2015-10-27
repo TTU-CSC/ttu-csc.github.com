@@ -19,7 +19,7 @@ and then begin flashing the red LED quickly and running the piezoelectric buzzer
 
 To do this, you will want to use an array to store the button sequence. To do this, simply initialize an array like so:
 
-    int passwd[] = { btnUP, btnLEFT, btnLEFT, btnUP };
+    int correctPassword[] = { btnUP, btnLEFT, btnLEFT, btnUP };
 
 or whatever sequence you would like. In order to check the password the user enters against it, we will need an array to hold their attempt (that way they don't know which button push was wrong).
 
@@ -36,7 +36,7 @@ followed by another one that will check the values:
 
     for (int i = 0; i < 4; i++)
     {
-    	//check each value in attempt against the passwd array
+    	//check each value in attempt against the correctPassword array
     }
 
 if one of the values doesn't match up, then we should `break` out of the loop and start the 5-second error sequence before returning to the locked state.
@@ -94,10 +94,12 @@ This week, we are providing a code template for you, since this lab is a little 
         int pressedKey;
         do {
           pressedKey = read_LCD_buttons();
+          delay(10);
         } while (pressedKey != keyCode && (pressedKey == btnNONE || keyCode != btnANY));
         
         //wait on the button to be released
-        while (read_LCD_buttons() == pressedKey);
+        while (read_LCD_buttons() == pressedKey)
+          delay(10);
         
         return pressedKey;
     }
@@ -186,9 +188,9 @@ This week, we are providing a code template for you, since this lab is a little 
        * If you want to move into the unlocked state, you
        * should simply return from this function -- do not
        * call 'unlock' directly. The 'loop' function will call the
-       * 'unlock' function for you. This will allow the stack to
+       * 'unlock' function for you. (This will allow the stack to
        * be cleaned up, rather than having a continuously growing
-       * function call stack.
+       * function call stack.)
        */
     }
 
