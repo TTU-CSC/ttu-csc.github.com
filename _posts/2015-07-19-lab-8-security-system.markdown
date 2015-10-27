@@ -158,7 +158,8 @@ This week, we are providing a code template for you, since this lab is a little 
              * This function will put the lockbox into
              * a locked state, as described in the lab.
              * This function should wait for the select
-             * key to be pressed before returning.
+             * key to be pressed before calling into
+             * the unlockAttempt state.
              */
           }
           
