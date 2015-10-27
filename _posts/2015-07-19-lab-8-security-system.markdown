@@ -140,7 +140,6 @@ This week, we are providing a code template for you, since this lab is a little 
            * This should not need to be modified.
            */
           void unlock() {
-          
             lcd.clear();
             lcd.print("UNLOCKED");
             digitalWrite(redLED, HIGH);
