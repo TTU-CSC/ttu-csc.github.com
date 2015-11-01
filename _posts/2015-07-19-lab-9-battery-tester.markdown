@@ -5,7 +5,7 @@ date:   2015-07-19 13:15:30
 categories: docs
 ---
 
-In this final structured lab, we will be making something directly useful: a battery tester! Specifically, we will want to be able to measure remaining charge in a 1.5V alkaline battery, such as AA and AAA batteries.
+We will be making something directly useful: a battery tester! Specifically, we will want to be able to measure remaining charge in a 1.5V alkaline battery, such as AA and AAA batteries.
 
 ![Alkaline State of Charge]({{site.url}}/images/Alkaline-SOC.jpg)  
 (source: [Battery University](http://batteryuniversity.com/learn/article/examining_loading_characteristics_on_primary_and_secondary_batteries))
