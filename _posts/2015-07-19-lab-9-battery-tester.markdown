@@ -17,4 +17,4 @@ The diagram for this lab is remarkably simple, excluding the LCD shield:
 
 This lab will simply rely upon connecting any AA or AAA battery's positive terminal to the Arduino analog input of your choice and the negative terminal to the Arduino's ground, except for analog input 0, `A0`, because that one is used by the LCD shield. Use the LCD shield to display the charge percentage remaining.
 
-(If you want to print to the LCD special characters, take a look [here](http://electronic-engineering.ch/microchip/datasheets/lcd/charset.gif).  You will need to convert the binary to decimal, and then the decimal value will need to be cast to a `char`.)
+(If you want to print special characters to the LCD, take a look [here](http://electronic-engineering.ch/microchip/datasheets/lcd/charset.gif).  You will need to convert the binary to decimal, and then the decimal value will need to be cast to a `char`.)
