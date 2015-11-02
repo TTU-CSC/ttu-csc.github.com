@@ -8,7 +8,7 @@ categories: docs
 In this final structured lab, we will be making a small music box. We will simply be using the piezo element with some software for this lab. Connect one wire of the Piezo element to `Pin 8` and one wire to `Gnd`.
 
 See this circuit layout:
-![Lab 9 diagram]({{site.url}}/images/lab_10.jpg)
+![Lab 10 diagram]({{site.url}}/images/lab_10.jpg)
 
 We will need to create a struct, which will allow you to store both a frequency and duration into a single element of an array, since we will be using an array to represent the notes of a song.
 
