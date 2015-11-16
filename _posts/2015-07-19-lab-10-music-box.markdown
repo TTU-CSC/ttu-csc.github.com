@@ -24,6 +24,6 @@ For the purposes of this demo, we will have no code in the `loop` function, only
 
 An array of the aforementioned structs could be constructed as `Note notes[3];`. The frequency element, for example, of the second note could be accessed as `notes[1].frequency`. You should use a for loop to loop over all of the notes and play their tone, rather than repeatedly copying and pasting code for each note, since that would be largely defeat the purpose of having an array in the first place.
 
-Make sure the song is at least 10 notes long, and demonstrate it to the TA.
+Make sure the song is at least 10 notes long with at least 5 different notes, and demonstrate it to the TA.
 
 For some extra guidence on converting a note into frequency, follow this [link]({% post_url 2015-11-09-pitches %}).
