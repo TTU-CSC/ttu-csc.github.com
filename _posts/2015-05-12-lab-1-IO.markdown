@@ -30,7 +30,7 @@ and then we can "write" that value to the output pin controlling the LED.
 
     digitalWrite(4, buttonPushed);
 
-**Challenge: Rewrite that code to just use one line to control the LED, rather than two.**
+**Challenge (for a grade): Rewrite that code to just use one line to control the LED, rather than two.**
 
 Now, LED 2 is on pin 5. So, let's make it so that LED 2 is *on* when the user is *not pushing* the button. In C++, if you have a value that is either true or false, you can invert the logical value with an exclamation mark (`!`). So, `!true` is exactly the same as `false`. If I say `bool good = true;` and then `bool notgood = !good;`, `notgood` is equal to false.
 
