@@ -59,4 +59,4 @@ Good luck!
 
 (Note: A 10ms delay is recommended between reads of the LCD buttons.  Without the delay, there is an error in the returned value which causes unintentional button presses.)
 
-<sup>[1]</sup> button code is adapted from the [LCD shield's documentation](https://www.dfrobot.com/wiki/index.php?title=Arduino_LCD_KeyPad_Shield_\(SKU:_DFR0009\)#Example_use_of_LiquidCrystal_library)
+<sup>[1]</sup> button code is adapted from the [LCD shield's documentation](https://www.dfrobot.com/wiki/index.php?title=LCD_KeyPad_Shield_For_Arduino_SKU:_DFR0009#Tutorial)
