@@ -25,26 +25,24 @@ In Conditional Logic, the goal is to make decisions based on information, rather
     >= greater than or equal to
 
 Each of these is used in conjunction with two *expressions*. Let's look at an example:
-
-    int numButtonsPushed = 0; //declare an integer named "numButtonsPushed" that has a value of 0.
-    //we're going to use this integer to count how many buttons are pushed.
     
-    if (digitalRead(2) == HIGH)  // "if digitalRead(2) is equal to HIGH"
-    {  // could also be said to say "if pin 2 is equal to HIGH" or "if pin 2 is on"
-        numButtonsPushed = numButtonsPushed + 1; // then let numButtonsPushed become the value of numButtonsPushed plus 1.
-    }
-    if (digitalRead(3) == HIGH) // "if digitalRead(3) is equal to HIGH"
-    {
-        numButtonsPushed = numButtonsPushed + 1; //then let numButtonsPushed become the value of numButtonsPushed plus 1
-    }
+    int button1Pushed = digitalRead(2);
+    int button2Pushed = digitalRead(3);
+    
+    //we're going to use this integer to count how many buttons are pushed.
+    int numButtonsPushed = button1Pushed + button2Pushed; 
     
     if (numButtonsPushed == 2) // "if numButtonsPushed is equal to 2"
     {
         // do some stuff only if both buttons are pushed
     }
-    else if (numButtonsPushed > 0) // "if numButtonsPushed is greater than 0"
+    else if (button1Pushed) // "if button 1 is pushed"
     {
-        // do some stuff if at least one button is pushed
+        // do some stuff if button 1 is pushed
+    }
+    else if (button2Pushed) // "if button 2 is pushed"
+    {
+        //do something if button 2 is pushed
     }
     else if (analogRead(0) <= 500) // "if analogRead(0) is less than or equal to 500"
     {
