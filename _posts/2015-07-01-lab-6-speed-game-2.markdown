@@ -47,7 +47,9 @@ then in your code you can use this function by using code similar to the followi
 
     int button = read_LCD_buttons();
     if (button == btnUP)
+    {
         //do something for the up button being pushed
+    }
     
 and `button` will now have the keycode for the button that was pushed.
 
