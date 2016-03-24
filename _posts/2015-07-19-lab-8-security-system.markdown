@@ -7,7 +7,7 @@ categories: docs
 
 For this lab, we want to design a simple safe, which will use a display, some buttons, a piezo, and an LED. 
 
-This is the circuit layout for this week, excluding the LCD shield, of course:
+This is the circuit layout for this week:
 ![Lab 8 diagram]({{site.url}}/images/lab_8.jpg)
 
 The end result should be that the display starts out showing "UNLOCKED" on the screen, with the red LED on and the green one off, since this is a dangerous state to be in -- anyone could take our stuff! When the user presses "SELECT" it will lock the safe, which involves printing "LOCKED" on the screen, as well as turning on the green LED and turning off the red one. The next time SELECT is pressed, it will ask for a 4-digit code to be entered. If the code is correct, it will return to the unlocked state. If the code is wrong, it will print a message on the screen saying
