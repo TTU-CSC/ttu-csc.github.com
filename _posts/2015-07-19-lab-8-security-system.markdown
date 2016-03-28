@@ -49,10 +49,10 @@ This week, we are providing a code template for you, since this lab is a little 
     //THE PASSWORD IS: <tell us the key sequence here>
 
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    * DO NOT MODIFY OR ADD ANY CODE BELOW 
-    * THIS LINE UNTIL NEXT STATEMENT IN 
-    *          CAPITAL TEXT
-    * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    *  DO NOT MODIFY OR ADD ANY CODE BELOW 
+    *  THIS LINE UNTIL NEXT STATEMENT IN 
+    *             CAPITAL TEXT
+    *  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     */
     #include <LiquidCrystal.h>
     LiquidCrystal lcd(8, 9, 4, 5, 6, 7);           // select the pins used on the LCD panel
