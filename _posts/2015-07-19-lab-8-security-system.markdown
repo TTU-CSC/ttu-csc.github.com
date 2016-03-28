@@ -49,8 +49,9 @@ This week, we are providing a code template for you, since this lab is a little 
     //THE PASSWORD IS: <tell us the key sequence here>
 
     /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    * DO NOT MODIFY ANY CODE BELOW THIS LINE
-    *  UNTIL NEXT STATEMENT IN CAPITAL TEXT
+    * DO NOT MODIFY OR ADD ANY CODE BELOW 
+    * THIS LINE UNTIL NEXT STATEMENT IN 
+    *          CAPITAL TEXT
     * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     */
     #include <LiquidCrystal.h>
@@ -122,9 +123,9 @@ This week, we are providing a code template for you, since this lab is a little 
     }
 
 
-    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-     * DO NOT MODIFY ANY CODE ABOVE THIS LINE.
-     * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+     * DO NOT MODIFY OR ADD ANY CODE ABOVE THIS LINE.
+     * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
      */
 
     bool getPassword(int correctPassword[]) {
