@@ -18,7 +18,7 @@ We will need to create a struct, which will allow you to store both a frequency 
     	unsigned long duration;
     };
 
-There is a built in function on Arduino called `tone` which allows you to output a square wave onto a digital pin, with a given frequency and duration. An example of tone would be `tone(8, 400, 500);`, which would generate a 400 Hz tone on pin 8 for 500 milliseconds.
+There is a built in function on Arduino called `tone` which allows you to output a square wave onto a digital pin, with a given frequency and duration. An example of tone would be `tone(8, 400, 500);`, which would generate a 400 Hz tone on pin 8 for 500 milliseconds. Another option (that appears to work much better) is to create a `tone(pin, frequency)` and a `delay(duration)` right after.
 
 For the purposes of this demo, we will have no code in the `loop` function, only in the `setup` function so things will happen only once. The reset button on the Arduino can act as a "play" button if the sequence needs to be heard again.
 
